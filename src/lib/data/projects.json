@@ -59,7 +59,7 @@
     ],
     "videoUrl": "",
     "presentationUrl": "",
-    "images": ["/images/placeholder-2.jpg"]
+    "images": ["/images/citykart-brand-identity.png"]
   },
   {
     "slug": "ai-vfx-fashion-film",
@@ -90,7 +90,7 @@
     ],
     "videoUrl": "https://drive.google.com/file/d/example",
     "presentationUrl": "",
-    "images": ["/images/placeholder-3.jpg"]
+    "images": ["/images/citykart-brand-identity.png"]
   },
   {
     "slug": "script-to-screen",
@@ -152,6 +152,6 @@
     ],
     "videoUrl": "",
     "presentationUrl": "https://docs.google.com/presentation/d/example",
-    "images": ["/images/placeholder-5.jpg"]
+    "images": ["/images/citykart-brand-identity.png"]
   }
 ]
