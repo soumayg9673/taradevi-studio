@@ -1,0 +1,157 @@
+[
+  {
+    "slug": "myntra-campaign-2024",
+    "title": "Myntra Festive Campaign 2024",
+    "note": "A full-cycle campaign blending AI-generated visuals with live photoshoots for the festive season.",
+    "company": "Myntra",
+    "isPersonal": false,
+    "isFeatured": true,
+    "image": "/images/citykart-brand-identity.png",
+    "link": "https://www.linkedin.com/in/tara-devi",
+    "tags": ["Campaign Film", "Art Direction", "Fashion"],
+    "seo": {
+      "title": "Myntra Festive Campaign 2024 — Tara Devi",
+      "description": "A full-cycle fashion campaign blending AI visuals and live photoshoots for Myntra's festive season.",
+      "keywords": "Myntra, Fashion Campaign, Art Direction, Creative Direction, Tara Devi"
+    },
+    "description": "Led the end-to-end creative direction for Myntra's festive campaign, from concept development to final delivery. Integrated AI-generated backgrounds with live model shoots to create a cohesive, high-impact visual narrative across digital and print platforms.",
+    "plan": [
+      "Conducted mood-board research and trend analysis for the festive season",
+      "Developed concept brief aligning with Myntra's brand identity and campaign goals",
+      "Coordinated AI background generation pipeline alongside live model shoot schedules",
+      "Managed cross-functional teams across photography, post-production, and digital delivery"
+    ],
+    "strategy": [
+      "Positioned the campaign around warmth and celebration using a rich jewel-tone palette",
+      "Blended AI-generated environments with real talent to cut production time by 30%",
+      "Rolled out assets across Instagram, app banners, and print simultaneously for maximum reach"
+    ],
+    "videoUrl": "",
+    "presentationUrl": "",
+    "images": ["/images/citykart-brand-identity.png", "/images/citykart-brand-identity.png"]
+  },
+  {
+    "slug": "citykart-brand-identity",
+    "title": "Citykart Brand Identity Refresh",
+    "note": "Complete visual identity overhaul for one of India's leading fashion retail chains.",
+    "company": "Citykart",
+    "isPersonal": false,
+    "isFeatured": true,
+    "image": "/images/citykart-brand-identity.png",
+    "link": "https://www.linkedin.com/in/tara-devi",
+    "tags": ["Brand Identity", "CGI", "Visual Storytelling"],
+    "seo": {
+      "title": "Citykart Brand Identity Refresh — Tara Devi",
+      "description": "Complete brand identity refresh and campaign direction for Citykart fashion retail.",
+      "keywords": "Citykart, Brand Identity, Creative Director, Fashion, Tara Devi"
+    },
+    "description": "Spearheaded a comprehensive brand identity refresh for Citykart over 3.5 years, defining the visual language across in-store, digital, and campaign materials. Used CGI and VFX to elevate campaign films beyond conventional retail aesthetics.",
+    "plan": [
+      "Audited existing brand assets and identified inconsistencies across touchpoints",
+      "Defined a new visual language — typography, colour system, and iconography",
+      "Created brand guidelines and handed off to in-house and agency teams",
+      "Supervised rollout across 200+ stores and all digital channels"
+    ],
+    "strategy": [
+      "Differentiated Citykart from competitors by leaning into bold, locally resonant visual storytelling",
+      "Used CGI and VFX to achieve premium aesthetics on a mid-market budget",
+      "Built a scalable design system to ensure brand consistency at every scale"
+    ],
+    "videoUrl": "",
+    "presentationUrl": "",
+    "images": ["/images/placeholder-2.jpg"]
+  },
+  {
+    "slug": "ai-vfx-fashion-film",
+    "title": "AI & VFX Fashion Film",
+    "note": "An experimental fashion film using cutting-edge AI and VFX techniques.",
+    "company": "Personal Project",
+    "isPersonal": true,
+    "isFeatured": true,
+    "image": "/images/citykart-brand-identity.png",
+    "link": "https://drive.google.com",
+    "tags": ["Film Production", "VFX", "AI", "Experimental"],
+    "seo": {
+      "title": "AI & VFX Fashion Film — Tara Devi",
+      "description": "An experimental fashion film exploring the intersection of AI generation and traditional film production.",
+      "keywords": "Fashion Film, VFX, AI, Film Production, Creative Direction, Tara Devi"
+    },
+    "description": "An experimental short fashion film exploring the intersection of artificial intelligence, CGI, and traditional cinematography. Every frame was crafted to push the boundaries of what's visually possible in fashion storytelling.",
+    "plan": [
+      "Storyboarded 12 scenes combining AI-generated and live-action footage",
+      "Sourced AI tools (Midjourney, Runway) and integrated with DaVinci Resolve pipeline",
+      "Scheduled a 2-day shoot with a minimal crew of 5",
+      "Delivered final cut and colour grade within a 3-week post-production window"
+    ],
+    "strategy": [
+      "Treated AI as a creative co-director rather than just a production shortcut",
+      "Used experimental transitions to blur the line between digital and physical realities",
+      "Released on Google Drive for direct sharing with potential brand collaborators"
+    ],
+    "videoUrl": "https://drive.google.com/file/d/example",
+    "presentationUrl": "",
+    "images": ["/images/placeholder-3.jpg"]
+  },
+  {
+    "slug": "script-to-screen",
+    "title": "Script to Screen: Campaign Reels",
+    "note": "Series of high-performing campaign reels scripted, directed, and produced from scratch.",
+    "company": "Citykart",
+    "isPersonal": false,
+    "isFeatured": false,
+    "image": "/images/citykart-brand-identity.png",
+    "link": "https://www.linkedin.com/in/tara-devi",
+    "tags": ["Script Writing", "Reels", "Direction"],
+    "seo": {
+      "title": "Script to Screen Campaign Reels — Tara Devi",
+      "description": "Campaign reels scripted, directed, and produced end-to-end for Citykart.",
+      "keywords": "Campaign Reels, Script Writing, Film Direction, Fashion, Tara Devi"
+    },
+    "description": "Conceived, scripted, and directed a series of campaign reels for Citykart's seasonal launches. Managed full production cycles including casting, set design, styling, and post-production.",
+    "plan": [
+      "Wrote scripts aligned with seasonal themes and campaign messaging",
+      "Held casting calls and coordinated with styling and set design teams",
+      "Directed on-set shoots across 4 seasonal campaigns in a single year",
+      "Oversaw editing, colour grading, and music licensing for final delivery"
+    ],
+    "strategy": [
+      "Kept each reel under 60 seconds to optimise for Instagram and YouTube Shorts",
+      "Used narrative arcs (problem → aspiration → resolution) to drive emotional engagement",
+      "A/B tested thumbnails and captions to maximise organic reach"
+    ],
+    "videoUrl": "https://www.youtube.com/watch?v=bK_fnLCgF9M",
+    "presentationUrl": "",
+    "images": ["/images/citykart-brand-identity.png"]
+  },
+  {
+    "slug": "photoshoot-direction",
+    "title": "Editorial Photoshoot Direction",
+    "note": "Award-winning editorial photoshoots with meticulous attention to composition and light.",
+    "company": "Personal Project",
+    "isPersonal": true,
+    "isFeatured": false,
+    "image": "/images/citykart-brand-identity.png",
+    "link": "https://drive.google.com",
+    "tags": ["Photography", "Art Direction", "Styling"],
+    "seo": {
+      "title": "Editorial Photoshoot Direction — Tara Devi",
+      "description": "Award-winning editorial photoshoot direction by Tara Devi.",
+      "keywords": "Photoshoot Direction, Art Direction, Fashion Photography, Best Photo Award, Tara Devi"
+    },
+    "description": "Directed and art directed editorial photoshoots that earned the Best Photograph award. Each shoot was carefully planned with mood boards, lighting concepts, and detailed styling briefs.",
+    "plan": [
+      "Created detailed mood boards drawing from fine art and editorial references",
+      "Developed lighting diagrams and location scouting notes for each concept",
+      "Briefed photographers, stylists, and MUAs with a unified visual direction",
+      "Selected and retouched final selects for print and digital submission"
+    ],
+    "strategy": [
+      "Prioritised authentic, unretouched skin and natural light to contrast over-produced industry norms",
+      "Submitted to competitions with strong conceptual narratives to stand out from technical-only entries",
+      "Archived every shoot into a structured portfolio for future brand pitches"
+    ],
+    "videoUrl": "",
+    "presentationUrl": "https://docs.google.com/presentation/d/example",
+    "images": ["/images/placeholder-5.jpg"]
+  }
+]
