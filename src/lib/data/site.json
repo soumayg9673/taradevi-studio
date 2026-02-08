@@ -1,9 +1,9 @@
 {
-  "name": "TARA DEVI",
+  "name": "Tara Devi",
   "title": "Senior Creative Producer | Designer | Film Production | Script Writer | Creative Strategist",
   "summary": "With over 5 years of experience as a Senior Creative Executive, she specializes in transforming ideas into powerful visual stories using AI, CGI, and VFX-driven productions. She has led the full cycle of campaign films, reels, and photoshoots, consistently delivering on brand vision, timelines, and budgets.",
   "location": "Gurugram, Haryana, India",
-  "profileImage": "/images/profile.png",
+  "profileImage": "/images/profile.jpeg",
   "contact": {
     "email": "hello@taradevi.studio",
     "linkedin": "https://www.linkedin.com/in/tara-devi",
@@ -59,8 +59,25 @@
     }
   ],
   "seo": {
-    "title": "Tara Devi — Creative Director & Fashion Filmmaker",
-    "description": "Portfolio of Tara Devi, Senior Creative Producer specializing in Art Direction, Fashion Creative Direction, and Film Production.",
-    "keywords": "Tara Devi, Art Director, Creative Director, Film Production, Fashion Creative Direction, Myntra, Citykart"
+    "home": {
+      "title": "Tara Devi — Creative Director & Fashion Filmmaker",
+      "description": "Portfolio of Tara Devi, Senior Creative Producer specializing in Art Direction, Fashion Creative Direction, and Film Production.",
+      "keywords": "Tara Devi, Art Director, Creative Director, Film Production, Fashion Creative Direction, Myntra, Citykart"
+    },
+    "about": {
+      "title": "About Tara Devi — Senior Creative Producer & Art Director",
+      "description": "5+ years leading visual storytelling, AI-driven productions, campaign films, and brand identity at Myntra and Citykart.",
+      "keywords": "Tara Devi About, Senior Creative Executive, Art Director, Visual Storyteller, Myntra Creative, Citykart Creative"
+    },
+    "work": {
+      "title": "Work — Tara Devi Creative Portfolio",
+      "description": "Browse the creative portfolio of Tara Devi — campaign films, fashion reels, photoshoots, and AI-driven productions for top Indian brands.",
+      "keywords": "Tara Devi Portfolio, Creative Work, Campaign Films, Fashion Photography, Art Direction, Reels"
+    },
+    "contact": {
+      "title": "Contact Tara Devi — Creative Director",
+      "description": "Get in touch with Tara Devi, Creative Director and Fashion Filmmaker based in Gurugram, India.",
+      "keywords": "Contact Tara Devi, Hire Creative Director, Fashion Filmmaker India, Creative Collaboration"
+    }
   }
 }

@@ -7,7 +7,12 @@
 </script>
 
 <svelte:head>
-  <title>{siteData.seo.title}</title>
+  <title>{siteData.seo.home.title}</title>
+  <meta name="description" content={siteData.seo.home.description} />
+  <meta name="keywords" content={siteData.seo.home.keywords} />
+  <meta property="og:title" content={siteData.seo.home.title} />
+  <meta property="og:description" content={siteData.seo.home.description} />
+  <meta property="og:type" content="website" />
 </svelte:head>
 
 <!-- Hero Section -->

@@ -10,10 +10,6 @@
 
 <svelte:head>
   <link rel="icon" href={favicon} />
-  <meta name="description" content={siteData.seo.description} />
-  <meta name="keywords" content={siteData.seo.keywords} />
-  <meta property="og:title" content={siteData.seo.title} />
-  <meta property="og:description" content={siteData.seo.description} />
 </svelte:head>
 
 <Header />

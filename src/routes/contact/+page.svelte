@@ -3,11 +3,12 @@
 </script>
 
 <svelte:head>
-	<title>Contact — {siteData.name}</title>
-	<meta
-		name="description"
-		content="Get in touch with {siteData.name} — Creative Director, Fashion Filmmaker based in Gurugram, India."
-	/>
+	<title>{siteData.seo.contact.title}</title>
+	<meta name="description" content={siteData.seo.contact.description} />
+	<meta name="keywords" content={siteData.seo.contact.keywords} />
+	<meta property="og:title" content={siteData.seo.contact.title} />
+	<meta property="og:description" content={siteData.seo.contact.description} />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
 <section class="contact-page">

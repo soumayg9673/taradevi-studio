@@ -6,8 +6,12 @@
 </script>
 
 <svelte:head>
-  <title>Work — {siteData.name}</title>
-  <meta name="description" content="Projects and work by {siteData.name} — Art Director, Creative Director, Film Production." />
+  <title>{siteData.seo.work.title}</title>
+  <meta name="description" content={siteData.seo.work.description} />
+  <meta name="keywords" content={siteData.seo.work.keywords} />
+  <meta property="og:title" content={siteData.seo.work.title} />
+  <meta property="og:description" content={siteData.seo.work.description} />
+  <meta property="og:type" content="website" />
 </svelte:head>
 
 <section class="work-page">

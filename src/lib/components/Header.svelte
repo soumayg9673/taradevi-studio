@@ -6,7 +6,7 @@
 <header class="header">
   <div class="header-inner">
     <a href="/" class="logo">
-      <span class="logo-name">{siteData.name}</span>
+      <span class="logo-name">{siteData.name.toUpperCase()}</span>
     </a>
     <nav class="nav">
       <a href="/work" class:active={$page.url.pathname.startsWith('/work')}>Work</a>

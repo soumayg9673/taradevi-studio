@@ -3,9 +3,12 @@
 </script>
 
 <svelte:head>
-  <title>About — {siteData.name}</title>
-  <meta name="description" content={siteData.seo.description} />
-  <meta name="keywords" content={siteData.seo.keywords} />
+  <title>{siteData.seo.about.title}</title>
+  <meta name="description" content={siteData.seo.about.description} />
+  <meta name="keywords" content={siteData.seo.about.keywords} />
+  <meta property="og:title" content={siteData.seo.about.title} />
+  <meta property="og:description" content={siteData.seo.about.description} />
+  <meta property="og:type" content="profile" />
 </svelte:head>
 
 <!-- Section 1: Profile -->

@@ -26,6 +26,9 @@
   <title>{data.project.seo.title}</title>
   <meta name="description" content={data.project.seo.description} />
   <meta name="keywords" content={data.project.seo.keywords} />
+  <meta property="og:title" content={data.project.seo.title} />
+  <meta property="og:description" content={data.project.seo.description} />
+  <meta property="og:type" content="article" />
 </svelte:head>
 
 <article class="project-page">
