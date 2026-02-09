@@ -65,7 +65,7 @@
 		"note": "An intimate journey through street photography that revealed the beauty of ordinary moments and deeper human connection.",
 		"company": "Personal Project",
 		"isPersonal": true,
-		"isFeatured": false,
+		"isFeatured": true,
 		"image": "/images/photoshoot-what-streets-taught-me/69.webp",
 		"link": "",
 		"tags": ["Photography", "Art Direction", "Styling"],
