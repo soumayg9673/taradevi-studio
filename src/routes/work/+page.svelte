@@ -37,14 +37,14 @@
                 <span class="tag">{tag}</span>
               {/each}
             </div>
-            {#if project.videoUrl || project.presentationUrl}
+            {#if (project.videoUrls && project.videoUrls.length > 0) || project.presentationUrl}
               <div class="project-media">
-                {#if project.videoUrl}
-                  <button class="media-badge" onclick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.videoUrl, '_blank', 'noopener,noreferrer'); }}>
+                {#each project.videoUrls ?? [] as videoUrl}
+                  <button class="media-badge" onclick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(videoUrl, '_blank', 'noopener,noreferrer'); }}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    {project.videoUrl.includes('youtube') ? 'YouTube' : 'Video'}
+                    {videoUrl.includes('youtube') ? 'YouTube' : 'Video'}
                   </button>
-                {/if}
+                {/each}
                 {#if project.presentationUrl}
                   <button class="media-badge" onclick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.presentationUrl, '_blank', 'noopener,noreferrer'); }}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
@@ -76,18 +76,20 @@
 
   .eyebrow {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--color-muted);
-    margin-bottom: 0.75rem;
+    margin-bottom: 1rem;
+    font-weight: 400;
   }
 
   .page-title {
     font-family: var(--font-display);
-    font-size: clamp(3rem, 7vw, 6rem);
+    font-size: clamp(3.5rem, 8vw, 7rem);
     font-weight: 300;
-    letter-spacing: -0.01em;
+    letter-spacing: -0.02em;
+    line-height: 0.95;
   }
 
   .projects-list {
@@ -137,32 +139,35 @@
 
   .project-num {
     font-family: var(--font-body);
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
     color: var(--color-muted);
   }
 
   .project-company {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--color-muted);
+    font-weight: 400;
   }
 
   .project-title {
     font-family: var(--font-display);
-    font-size: clamp(1.3rem, 2vw, 1.9rem);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-top: 0.2rem;
+    font-size: clamp(1.4rem, 2.2vw, 2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-top: 0.25rem;
+    letter-spacing: -0.01em;
   }
 
   .project-note {
     font-family: var(--font-body);
-    font-size: 0.88rem;
+    font-size: 0.85rem;
     color: var(--color-muted);
-    line-height: 1.7;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
   }
 
   .project-tags {
@@ -174,11 +179,12 @@
 
   .tag {
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    padding: 0.2rem 0.7rem;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.75rem;
     border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.07);
-    letter-spacing: 0.04em;
+    background-color: rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .project-media {
@@ -193,11 +199,12 @@
     align-items: center;
     gap: 0.35rem;
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    padding: 0.25rem 0.75rem;
+    font-size: 0.62rem;
+    padding: 0.25rem 0.8rem;
     border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.12);
-    letter-spacing: 0.04em;
+    background-color: rgba(0, 0, 0, 0.1);
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
     text-decoration: none;
     color: inherit;
     transition: background-color 0.2s ease;

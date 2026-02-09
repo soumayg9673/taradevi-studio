@@ -36,15 +36,16 @@
 
   .footer-label {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    letter-spacing: 0.2em;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--color-muted);
+    font-weight: 400;
   }
 
   .footer-cta {
     font-family: var(--font-display);
-    font-size: clamp(1.2rem, 2.8vw, 1.8rem);
+    font-size: clamp(1.3rem, 3vw, 2rem);
     font-style: italic;
     font-weight: 300;
     color: var(--color-text);
@@ -54,10 +55,10 @@
 
   .footer-email {
     font-family: var(--font-body);
-    font-size: 0.95rem;
+    font-size: 0.82rem;
     color: var(--color-muted);
-    letter-spacing: 0.04em;
-    transition: color 0.2s;
+    letter-spacing: 0.15em;
+    transition: color 0.3s;
     margin-top: 0.25rem;
   }
 
@@ -74,8 +75,9 @@
 
   .footer-copy {
     font-family: var(--font-body);
-    font-size: 0.72rem;
-    letter-spacing: 0.06em;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--color-muted);
     margin-top: 0.5rem;
   }

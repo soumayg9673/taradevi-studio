@@ -24,7 +24,7 @@
         <p class="eyebrow">About</p>
         <h1 class="about-name">{siteData.name}</h1>
         <p class="about-subtitle">{siteData.title}</p>
-        <p class="about-summary">{siteData.summary}</p>
+        <p class="about-summary">{siteData.aboutMe}</p>
         <div class="highlights">
           {#each siteData.highlights as highlight, i}
             {@const colors = ['var(--color-pink)', 'var(--color-yellow)', 'var(--color-blue)']}
@@ -102,11 +102,12 @@
 
   .eyebrow {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    letter-spacing: 0.18em;
+    font-size: 0.65rem;
+    letter-spacing: 0.4em;
     text-transform: uppercase;
     color: var(--color-muted);
     margin-bottom: 2rem;
+    font-weight: 400;
   }
 
   /* ── Section 1: Profile ── */
@@ -140,24 +141,29 @@
 
   .about-name {
     font-family: var(--font-display);
-    font-size: clamp(2.5rem, 6vw, 5rem);
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
     font-weight: 300;
-    letter-spacing: 0.06em;
+    letter-spacing: 0.04em;
     margin-top: -0.5rem;
+    line-height: 0.95;
   }
 
   .about-subtitle {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-family: var(--font-display);
+    font-size: 1.1rem;
+    font-style: italic;
+    font-weight: 300;
     color: var(--color-muted);
-    line-height: 1.7;
-    margin-top: -0.75rem;
+    line-height: 1.5;
+    margin-top: -0.5rem;
+    letter-spacing: 0.01em;
   }
 
   .about-summary {
     font-family: var(--font-body);
-    font-size: 1rem;
-    line-height: 1.85;
+    font-size: 0.92rem;
+    line-height: 1.9;
+    letter-spacing: 0.01em;
   }
 
   .highlights {
@@ -180,17 +186,18 @@
 
   .highlight-value {
     font-family: var(--font-display);
-    font-size: 2rem;
-    font-weight: 500;
+    font-size: 2.2rem;
+    font-weight: 300;
     letter-spacing: -0.02em;
   }
 
   .highlight-label {
     font-family: var(--font-body);
-    font-size: 0.72rem;
-    letter-spacing: 0.08em;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-muted);
+    font-weight: 400;
   }
 
   /* ── Section 2: Expertise ── */
@@ -219,17 +226,19 @@
 
   .expertise-title {
     font-family: var(--font-display);
-    font-size: 1.15rem;
-    font-weight: 500;
+    font-size: 1.25rem;
+    font-weight: 400;
     margin-top: 0.3rem;
+    letter-spacing: 0.01em;
   }
 
   .expertise-desc {
     font-family: var(--font-body);
-    font-size: 0.82rem;
-    line-height: 1.75;
+    font-size: 0.8rem;
+    line-height: 1.8;
     color: var(--color-muted);
     flex: 1;
+    letter-spacing: 0.01em;
   }
 
   /* ── Section 3: Experience ── */
@@ -262,32 +271,41 @@
 
   .job-company {
     font-family: var(--font-display);
-    font-size: 1.2rem;
-    font-weight: 500;
+    font-size: 1.3rem;
+    font-weight: 400;
+    letter-spacing: 0.01em;
   }
 
   .job-period {
     font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
     color: var(--color-muted);
+    text-transform: uppercase;
   }
 
   .job-role {
-    font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-family: var(--font-display);
+    font-size: 0.95rem;
+    font-style: italic;
+    font-weight: 300;
+    letter-spacing: 0.01em;
   }
 
   .job-location {
     font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.15em;
     color: var(--color-muted);
+    text-transform: uppercase;
   }
 
   .job-description {
     font-family: var(--font-body);
-    font-size: 0.88rem;
-    line-height: 1.75;
+    font-size: 0.85rem;
+    line-height: 1.8;
     margin-top: 0.65rem;
+    letter-spacing: 0.01em;
   }
 
   /* ── Shared ── */
@@ -300,11 +318,12 @@
 
   .skill-tag {
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    padding: 0.2rem 0.7rem;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.75rem;
     border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.07);
-    letter-spacing: 0.04em;
+    background-color: rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   /* ── Responsive ── */

@@ -47,21 +47,6 @@
 				</div>
 				<span class="contact-arrow">→</span>
 			</a>
-
-			<a
-				href={siteData.contact.instagram}
-				target="_blank"
-				rel="noopener noreferrer"
-				class="contact-item"
-				style="background-color: var(--color-lavender)"
-			>
-				<i class="fa-brands fa-instagram text-lg hover:text-[#FF671F]"></i>
-				<div class="contact-text">
-					<span class="contact-label">Instagram</span>
-					<span class="contact-value">@tara-devi</span>
-				</div>
-				<span class="contact-arrow">→</span>
-			</a>
 		</div>
 	</div>
 </section>
@@ -82,32 +67,37 @@
 
 	.eyebrow {
 		font-family: var(--font-body);
-		font-size: 0.78rem;
-		letter-spacing: 0.18em;
+		font-size: 0.65rem;
+		letter-spacing: 0.4em;
 		text-transform: uppercase;
 		color: var(--color-muted);
-		margin-bottom: 0.75rem;
+		margin-bottom: 1rem;
+		font-weight: 400;
 	}
 
 	.page-title {
 		font-family: var(--font-display);
-		font-size: clamp(3.5rem, 9vw, 7rem);
+		font-size: clamp(4rem, 10vw, 8rem);
 		font-weight: 300;
-		line-height: 1.0;
-		letter-spacing: -0.01em;
-		margin-bottom: 1.5rem;
+		line-height: 0.95;
+		letter-spacing: -0.02em;
+		margin-bottom: 1.75rem;
 	}
 
 	.page-title em {
 		font-style: italic;
+		font-weight: 300;
 	}
 
 	.contact-subtitle {
-		font-family: var(--font-body);
-		font-size: 1rem;
+		font-family: var(--font-display);
+		font-size: 1.15rem;
+		font-style: italic;
+		font-weight: 300;
 		color: var(--color-muted);
-		margin-bottom: 3rem;
-		line-height: 1.7;
+		margin-bottom: 3.5rem;
+		line-height: 1.6;
+		letter-spacing: 0.01em;
 	}
 
 	.contact-links {
@@ -146,16 +136,18 @@
 
 	.contact-label {
 		font-family: var(--font-body);
-		font-size: 0.7rem;
-		letter-spacing: 0.12em;
+		font-size: 0.62rem;
+		letter-spacing: 0.25em;
 		text-transform: uppercase;
 		color: var(--color-muted);
+		font-weight: 400;
 	}
 
 	.contact-value {
 		font-family: var(--font-body);
-		font-size: 0.95rem;
+		font-size: 0.9rem;
 		font-weight: 400;
+		letter-spacing: 0.02em;
 	}
 
 	.contact-arrow {

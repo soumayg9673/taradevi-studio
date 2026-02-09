@@ -38,31 +38,31 @@
 
   .logo-name {
     font-family: var(--font-display);
-    font-size: 1.2rem;
-    font-weight: 400;
-    letter-spacing: 0.22em;
+    font-size: 1.15rem;
+    font-weight: 300;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--color-text);
-    transition: opacity 0.3s;
+    transition: opacity 0.4s ease;
   }
 
   .logo:hover .logo-name {
-    opacity: 0.5;
+    opacity: 0.45;
   }
 
   .nav {
     display: flex;
-    gap: 2.75rem;
+    gap: 3rem;
   }
 
   .nav a {
     font-family: var(--font-body);
-    font-size: 0.75rem;
+    font-size: 0.68rem;
     font-weight: 400;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--color-muted);
-    transition: color 0.25s ease;
+    transition: color 0.3s ease;
     position: relative;
   }
 

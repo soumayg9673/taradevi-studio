@@ -55,19 +55,21 @@
     </div>
 
     <!-- Media Embeds -->
-    {#if getVideoEmbedUrl(data.project.videoUrl ?? '') || getSlidesEmbedUrl(data.project.presentationUrl ?? '')}
+    {#if (data.project.videoUrls && data.project.videoUrls.length > 0) || getSlidesEmbedUrl(data.project.presentationUrl ?? '')}
       <div class="project-media">
-        {#if getVideoEmbedUrl(data.project.videoUrl ?? '')}
-          <div class="media-embed">
-            <p class="media-label">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-              {data.project.videoUrl?.includes('youtube') ? 'YouTube' : 'Video'}
-            </p>
-            <div class="embed-frame">
-              <iframe src={getVideoEmbedUrl(data.project.videoUrl ?? '') ?? ''} title="Project video" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+        {#each data.project.videoUrls ?? [] as videoUrl, i}
+          {#if getVideoEmbedUrl(videoUrl)}
+            <div class="media-embed">
+              <p class="media-label">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+                {videoUrl.includes('youtube') ? 'YouTube' : 'Video'}{data.project.videoUrls.length > 1 ? ` ${i + 1}` : ''}
+              </p>
+              <div class="embed-frame">
+                <iframe src={getVideoEmbedUrl(videoUrl) ?? ''} title="Project video {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+              </div>
             </div>
-          </div>
-        {/if}
+          {/if}
+        {/each}
         {#if getSlidesEmbedUrl(data.project.presentationUrl ?? '')}
           <div class="media-embed">
             <p class="media-label">
@@ -148,11 +150,12 @@
 
   .back-link {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    letter-spacing: 0.1em;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--color-muted);
-    transition: color 0.2s;
+    transition: color 0.3s;
+    font-weight: 400;
   }
 
   .back-link:hover {
@@ -168,18 +171,19 @@
 
   .project-company {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
+    font-size: 0.65rem;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--color-muted);
+    font-weight: 400;
   }
 
   .project-title {
     font-family: var(--font-display);
-    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-size: clamp(2.2rem, 5.5vw, 4rem);
     font-weight: 300;
-    line-height: 1.15;
-    letter-spacing: -0.01em;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
   }
 
   .project-tags {
@@ -191,11 +195,12 @@
 
   .tag {
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    padding: 0.2rem 0.7rem;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.75rem;
     border-radius: 999px;
     background-color: var(--color-lavender);
-    letter-spacing: 0.04em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .project-images {
@@ -223,11 +228,12 @@
     align-items: center;
     gap: 0.4rem;
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    letter-spacing: 0.12em;
+    font-size: 0.65rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--color-muted);
     margin-bottom: 0.75rem;
+    font-weight: 400;
   }
 
   .embed-frame {
@@ -256,8 +262,9 @@
 
   .project-description {
     font-family: var(--font-body);
-    font-size: 1.05rem;
-    line-height: 1.85;
+    font-size: 0.95rem;
+    line-height: 1.9;
+    letter-spacing: 0.01em;
   }
 
   .project-breakdown {
@@ -271,9 +278,9 @@
 
   .breakdown-title {
     font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 500;
-    letter-spacing: 0.15em;
+    font-size: 0.65rem;
+    font-weight: 400;
+    letter-spacing: 0.3em;
     text-transform: uppercase;
     color: var(--color-muted);
     margin-bottom: 1rem;
@@ -288,10 +295,11 @@
 
   .breakdown-list li {
     font-family: var(--font-body);
-    font-size: 0.9rem;
-    line-height: 1.65;
+    font-size: 0.85rem;
+    line-height: 1.7;
     padding-left: 1.1rem;
     position: relative;
+    letter-spacing: 0.01em;
   }
 
   .breakdown-list li::before {
@@ -303,14 +311,15 @@
 
   .project-link {
     font-family: var(--font-body);
-    font-size: 0.9rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--color-text);
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    transition: gap 0.2s ease;
+    gap: 0.5rem;
+    transition: gap 0.25s ease;
   }
 
   .project-link:hover {
@@ -333,9 +342,9 @@
 
   .related-label {
     font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-size: 0.65rem;
     font-weight: 400;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--color-muted);
     margin-bottom: 1.5rem;
@@ -376,17 +385,19 @@
 
   .related-company {
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    letter-spacing: 0.1em;
+    font-size: 0.62rem;
+    letter-spacing: 0.2em;
     text-transform: uppercase;
     color: var(--color-muted);
+    font-weight: 400;
   }
 
   .related-name {
     font-family: var(--font-display);
-    font-size: 1rem;
-    font-weight: 400;
-    line-height: 1.3;
+    font-size: 1.05rem;
+    font-weight: 300;
+    line-height: 1.25;
+    letter-spacing: 0.01em;
   }
 
   @media (max-width: 768px) {

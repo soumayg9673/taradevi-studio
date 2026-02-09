@@ -16,7 +16,7 @@
   --color-border: #e2ddd6;
 
   /* Typography */
-  --font-display: 'Cormorant', 'Georgia', serif;
+  --font-display: 'Cormorant Garamond', 'Cormorant', 'Georgia', serif;
   --font-body: 'DM Sans', system-ui, sans-serif;
 
   /* Spacing */
@@ -35,20 +35,23 @@
 html {
   scroll-behavior: smooth;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 body {
   background-color: var(--color-bg);
   color: var(--color-text);
   font-family: var(--font-body);
-  font-size: 16px;
-  line-height: 1.7;
+  font-size: 15px;
+  line-height: 1.75;
+  letter-spacing: 0.01em;
 }
 
 h1, h2, h3, h4 {
   font-family: var(--font-display);
   font-weight: 300;
-  line-height: 1.1;
+  line-height: 1.05;
+  letter-spacing: -0.02em;
 }
 
 a {

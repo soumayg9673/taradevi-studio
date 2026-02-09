@@ -19,7 +19,9 @@
 <section class="hero">
   <div class="hero-inner">
     <p class="hero-eyebrow">Creative Director · Art Director · Film Production</p>
-    <h1 class="hero-summary">{siteData.summary}</h1>
+    <h1 class="hero-title">{siteData.title}</h1>
+    <p class="hero-dash">—</p>
+    <p class="hero-summary">{siteData.summary}</p>
   </div>
 </section>
 
@@ -61,35 +63,59 @@
 <style>
   /* Hero */
   .hero {
-    padding: 8rem var(--page-pad) 6rem;
+    padding: 0 var(--page-pad);
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 50vh;
+    min-height: calc(100svh - 4rem);
   }
 
   .hero-inner {
-    max-width: 860px;
+    max-width: 960px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 
   .hero-eyebrow {
     font-family: var(--font-body);
-    font-size: 0.72rem;
-    letter-spacing: 0.28em;
+    font-size: 0.6rem;
+    letter-spacing: 0.5em;
     text-transform: uppercase;
     color: var(--color-muted);
-    margin-bottom: 2rem;
+    margin-bottom: 3.5rem;
+    font-weight: 400;
+  }
+
+  .hero-title {
+    font-family: var(--font-display);
+    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-weight: 300;
+    line-height: 1.1;
+    color: var(--color-text);
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+  }
+
+  .hero-dash {
+    font-family: var(--font-display);
+    font-size: 1.5rem;
+    font-weight: 300;
+    color: var(--color-border);
+    margin: 1.25rem 0;
+    letter-spacing: 0.5em;
   }
 
   .hero-summary {
     font-family: var(--font-display);
-    font-size: clamp(1.75rem, 4vw, 3rem);
+    font-size: clamp(1rem, 1.8vw, 1.25rem);
     font-weight: 300;
     font-style: italic;
-    line-height: 1.5;
-    color: var(--color-text);
-    letter-spacing: -0.01em;
+    line-height: 1.85;
+    color: var(--color-muted);
+    letter-spacing: 0.01em;
+    max-width: 680px;
   }
 
   .divider {
@@ -118,12 +144,12 @@
 
   .section-heading {
     font-family: var(--font-body);
-    font-size: 0.78rem;
+    font-size: 0.68rem;
     font-weight: 400;
-    letter-spacing: 0.18em;
+    letter-spacing: 0.35em;
     text-transform: uppercase;
     color: var(--color-muted);
-    margin-bottom: 3rem;
+    margin-bottom: 3.5rem;
   }
 
   .project-card {
@@ -167,32 +193,35 @@
 
   .project-index {
     font-family: var(--font-body);
-    font-size: 0.72rem;
-    letter-spacing: 0.15em;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
     color: var(--color-muted);
   }
 
   .project-company {
     font-family: var(--font-body);
-    font-size: 0.78rem;
-    letter-spacing: 0.12em;
+    font-size: 0.68rem;
+    letter-spacing: 0.25em;
     text-transform: uppercase;
     color: var(--color-muted);
+    font-weight: 400;
   }
 
   .project-title {
     font-family: var(--font-display);
-    font-size: clamp(1.4rem, 2.2vw, 2rem);
-    font-weight: 400;
-    line-height: 1.2;
-    margin-top: 0.25rem;
+    font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+    font-weight: 300;
+    line-height: 1.15;
+    margin-top: 0.3rem;
+    letter-spacing: -0.01em;
   }
 
   .project-note {
     font-family: var(--font-body);
-    font-size: 0.9rem;
+    font-size: 0.85rem;
     color: var(--color-muted);
-    line-height: 1.7;
+    line-height: 1.75;
+    letter-spacing: 0.01em;
   }
 
   .project-tags {
@@ -204,24 +233,26 @@
 
   .tag {
     font-family: var(--font-body);
-    font-size: 0.7rem;
-    padding: 0.2rem 0.7rem;
+    font-size: 0.62rem;
+    padding: 0.22rem 0.75rem;
     border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.07);
-    letter-spacing: 0.04em;
+    background-color: rgba(0, 0, 0, 0.06);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
   }
 
   .project-link {
     margin-top: 0.75rem;
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-size: 0.75rem;
+    font-weight: 400;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
     color: var(--color-text);
     display: inline-flex;
     align-items: center;
-    gap: 0.4rem;
-    transition: gap 0.2s ease;
+    gap: 0.5rem;
+    transition: gap 0.25s ease;
   }
 
   .project-link:hover {
@@ -243,11 +274,12 @@
 
   .view-all a {
     font-family: var(--font-body);
-    font-size: 0.85rem;
-    font-weight: 500;
-    letter-spacing: 0.06em;
+    font-size: 0.72rem;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    text-transform: uppercase;
     color: var(--color-muted);
-    transition: color 0.2s;
+    transition: color 0.3s;
   }
 
   .view-all a:hover {
@@ -256,7 +288,16 @@
 
   @media (max-width: 768px) {
     .hero {
-      padding: 4rem var(--page-pad) 3rem;
+      min-height: calc(100svh - 3.5rem);
+      padding: 2rem var(--page-pad);
+    }
+
+    .hero-eyebrow {
+      margin-bottom: 2rem;
+    }
+
+    .hero-dash {
+      margin: 1.5rem 0;
     }
 
     .projects {
