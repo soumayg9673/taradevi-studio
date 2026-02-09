@@ -23,7 +23,7 @@
       <div class="profile-content">
         <p class="eyebrow">About</p>
         <h1 class="about-name">{siteData.name}</h1>
-        <p class="about-subtitle">{siteData.title}</p>
+        <p class="about-subtitle">{siteData.aboutTitle}</p>
         <p class="about-summary">{siteData.aboutMe}</p>
         <div class="highlights">
           {#each siteData.highlights as highlight, i}
@@ -207,7 +207,7 @@
 
   .expertise-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1rem;
   }
 
