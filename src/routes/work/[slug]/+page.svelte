@@ -47,6 +47,11 @@
       </div>
     </header>
 
+    <!-- Description above images for personal projects -->
+    {#if data.project.isPersonal}
+      <p class="project-description">{data.project.description}</p>
+    {/if}
+
     <!-- Images -->
     <div class="project-images">
       {#each data.project.images as img}
@@ -111,7 +116,9 @@
 
     <!-- Description & Link -->
     <div class="project-body">
-      <p class="project-description">{data.project.description}</p>
+      {#if !data.project.isPersonal}
+        <p class="project-description">{data.project.description}</p>
+      {/if}
 
       {#if (data.project.plan && data.project.plan.length > 0) || (data.project.strategy && data.project.strategy.length > 0)}
         <div class="project-breakdown">
@@ -138,9 +145,11 @@
         </div>
       {/if}
 
-      <a href={data.project.link} target="_blank" rel="noopener noreferrer" class="project-link">
-        View Full Project <span class="arrow">→</span>
-      </a>
+      {#if data.project.link}
+        <a href={data.project.link} target="_blank" rel="noopener noreferrer" class="project-link">
+          View Full Project <span class="arrow">→</span>
+        </a>
+      {/if}
     </div>
 
     <!-- Related Work -->
