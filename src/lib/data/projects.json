@@ -26,7 +26,9 @@
 			"Blended AI-generated environments with real talent to cut production time by 30%",
 			"Rolled out assets across Instagram, app banners, and print simultaneously for maximum reach"
 		],
-		"videoUrls": ["https://drive.google.com/file/d/17Rixo8frLM-Jqu5frRmBjApIMKmY2lP9/view?usp=drive_link"],
+		"videos": [
+			{ "url": "https://drive.google.com/file/d/17Rixo8frLM-Jqu5frRmBjApIMKmY2lP9/view?usp=drive_link", "type": "landscape" }
+		],
 		"presentationUrl": "",
 		"images": ["/images/citykart-brand-identity.png", "/images/citykart-brand-identity.png"]
 	},
@@ -57,7 +59,7 @@
 			"Used CGI and VFX to achieve premium aesthetics on a mid-market budget",
 			"Built a scalable design system to ensure brand consistency at every scale"
 		],
-		"videoUrls": [],
+		"videos": [],
 		"presentationUrl": "",
 		"images": ["/images/citykart-brand-identity.png"]
 	},
@@ -90,12 +92,22 @@
 			"Elevated the brand’s perception in Tier 2, 3, and 4 markets by benchmarking art direction against global luxury standards, effectively bridging the gap between high-end international aesthetics and local accessibility.",
 			"Strategized the use of foreign talent and premium styling to offer a \"window into luxury\" for regional audiences, differentiating the brand from the utilitarian imagery typically used by competitors in these territories.",
 			"Produced 100+ creative assets to fuel an aggressive social calendar, ensuring the brand dominated the \"share of voice\" on platforms like Instagram and Facebook during the peak winter shopping window.",
-      "Designed a dual-track shooting workflow that enabled the simultaneous capture of cinematic brand reels and an editorial photoshoot, maximizing asset output without doubling production time.",
-      "Curated a specific \"look and feel\" that combined high-fashion foreign model casting with relatable winter styling, creating a unique \"Global-Local\" (Glocal) identity that felt both premium and reachable for regional consumers.",
-      "Cleverly utilized high-end art direction and foreign casting to \"price up\" the brand’s perception, allowing a mid-market product to compete for the psychological mindshare of a luxury consumer.",
-      " Architected a high-gloss visual narrative that suggested an international budget while maintaining a lean, high-output production model—forcing competitors to overspend to match our visual standard."
+			"Designed a dual-track shooting workflow that enabled the simultaneous capture of cinematic brand reels and an editorial photoshoot, maximizing asset output without doubling production time.",
+			"Curated a specific \"look and feel\" that combined high-fashion foreign model casting with relatable winter styling, creating a unique \"Global-Local\" (Glocal) identity that felt both premium and reachable for regional consumers.",
+			"Cleverly utilized high-end art direction and foreign casting to \"price up\" the brand’s perception, allowing a mid-market product to compete for the psychological mindshare of a luxury consumer.",
+			" Architected a high-gloss visual narrative that suggested an international budget while maintaining a lean, high-output production model—forcing competitors to overspend to match our visual standard."
 		],
-		"videoUrls": ["https://drive.google.com/file/d/example"],
+		"videos": [
+			{ "url": "https://drive.google.com/file/d/1tN11tJOz4Q0jOOSQoQpaM8z391iii2SA/view?usp=drive_link", "type": "reel" },
+			{ "url": "https://drive.google.com/file/d/1QTavnaU3aml99Om_nPICj_g_XU_t0UDw/view?usp=drive_link", "type": "reel" },
+			{ "url": "https://drive.google.com/file/d/1I2K3aMcPU1N9F3tmkFGmyL8RPPr0DS5X/view?usp=drive_link", "type": "reel" },
+			{ "url": "https://drive.google.com/file/d/1_dYUYaMgF6qg6XUH0NLO_gt_EEdyr2Uo/view?usp=drive_link", "type": "reel" },
+			{ "url": "https://drive.google.com/file/d/15RjnmRgfhgc38ide5zjqzy7LTx3P2gqT/view?usp=drive_link", "type": "reel" },
+			{ "url": "https://drive.google.com/file/d/1Y3XnGLmh4JD-_VkHta660nplKNjJnEYF/view?usp=drive_link", "type": "reel" },
+			{ "url": "https://drive.google.com/file/d/1Aq5yEef_pOJ5j077NN5wDFJ24vwY77KB/view?usp=drive_link", "type": "reel" },
+			{ "url": "https://drive.google.com/file/d/1dDQPZqruYANE04ldC6qzXinUH35gVk6A/view?usp=drive_link", "type": "reel" },
+      { "url": "https://drive.google.com/file/d/1tYv_uUGZhax2WEGvWbPMtEbkH9BCKqxv/view?usp=drive_link", "type": "reel" }
+		],
 		"presentationUrl": "",
 		"images": [
 			"/images/winter-campaign/winter-campaign-1.webp",
@@ -138,7 +150,7 @@
 			"Used narrative arcs (problem → aspiration → resolution) to drive emotional engagement",
 			"A/B tested thumbnails and captions to maximise organic reach"
 		],
-		"videoUrls": ["https://www.youtube.com/watch?v=bK_fnLCgF9M"],
+		"videos": [{ "url": "https://www.youtube.com/watch?v=bK_fnLCgF9M", "type": "landscape" }],
 		"presentationUrl": "",
 		"images": ["/images/citykart-brand-identity.png"]
 	},
@@ -169,7 +181,7 @@
 			"Submitted to competitions with strong conceptual narratives to stand out from technical-only entries",
 			"Archived every shoot into a structured portfolio for future brand pitches"
 		],
-		"videoUrls": [],
+		"videos": [],
 		"presentationUrl": "https://docs.google.com/presentation/d/example",
 		"images": ["/images/citykart-brand-identity.png"]
 	}

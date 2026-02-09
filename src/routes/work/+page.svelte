@@ -37,12 +37,12 @@
                 <span class="tag">{tag}</span>
               {/each}
             </div>
-            {#if (project.videoUrls && project.videoUrls.length > 0) || project.presentationUrl}
+            {#if (project.videos && project.videos.length > 0) || project.presentationUrl}
               <div class="project-media">
-                {#each project.videoUrls ?? [] as videoUrl}
-                  <button class="media-badge" onclick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(videoUrl, '_blank', 'noopener,noreferrer'); }}>
+                {#each project.videos ?? [] as video}
+                  <button class="media-badge" onclick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(video.url, '_blank', 'noopener,noreferrer'); }}>
                     <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    {videoUrl.includes('youtube') ? 'YouTube' : 'Video'}
+                    {video.url.includes('youtube') ? 'YouTube' : 'Video'}
                   </button>
                 {/each}
                 {#if project.presentationUrl}

@@ -54,33 +54,58 @@
       {/each}
     </div>
 
-    <!-- Media Embeds -->
-    {#if (data.project.videoUrls && data.project.videoUrls.length > 0) || getSlidesEmbedUrl(data.project.presentationUrl ?? '')}
-      <div class="project-media">
-        {#each data.project.videoUrls ?? [] as videoUrl, i}
-          {#if getVideoEmbedUrl(videoUrl)}
-            <div class="media-embed">
-              <p class="media-label">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                {videoUrl.includes('youtube') ? 'YouTube' : 'Video'}{data.project.videoUrls.length > 1 ? ` ${i + 1}` : ''}
-              </p>
-              <div class="embed-frame">
-                <iframe src={getVideoEmbedUrl(videoUrl) ?? ''} title="Project video {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-              </div>
-            </div>
-          {/if}
-        {/each}
-        {#if getSlidesEmbedUrl(data.project.presentationUrl ?? '')}
-          <div class="media-embed">
-            <p class="media-label">
-              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-              Presentation
-            </p>
-            <div class="embed-frame">
-              <iframe src={getSlidesEmbedUrl(data.project.presentationUrl ?? '') ?? ''} title="Project presentation" frameborder="0" allowfullscreen></iframe>
-            </div>
+    <!-- Videos -->
+    {#if data.project.videos && data.project.videos.length > 0}
+      {@const reels = data.project.videos.filter((v: {url: string, type: string}) => v.type === 'reel')}
+      {@const landscapes = data.project.videos.filter((v: {url: string, type: string}) => v.type === 'landscape')}
+
+      {#if landscapes.length > 0}
+        <div class="video-section">
+          <p class="media-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Videos
+          </p>
+          <div class="landscape-videos">
+            {#each landscapes as video, i}
+              {#if getVideoEmbedUrl(video.url)}
+                <div class="embed-frame landscape">
+                  <iframe src={getVideoEmbedUrl(video.url) ?? ''} title="Video {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+              {/if}
+            {/each}
           </div>
-        {/if}
+        </div>
+      {/if}
+
+      {#if reels.length > 0}
+        <div class="video-section">
+          <p class="media-label">
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
+            Reels
+          </p>
+          <div class="reel-videos">
+            {#each reels as video, i}
+              {#if getVideoEmbedUrl(video.url)}
+                <div class="embed-frame reel">
+                  <iframe src={getVideoEmbedUrl(video.url) ?? ''} title="Reel {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                </div>
+              {/if}
+            {/each}
+          </div>
+        </div>
+      {/if}
+    {/if}
+
+    <!-- Presentation -->
+    {#if getSlidesEmbedUrl(data.project.presentationUrl ?? '')}
+      <div class="video-section">
+        <p class="media-label">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
+          Presentation
+        </p>
+        <div class="embed-frame landscape">
+          <iframe src={getSlidesEmbedUrl(data.project.presentationUrl ?? '') ?? ''} title="Project presentation" frameborder="0" allowfullscreen></iframe>
+        </div>
       </div>
     {/if}
 
@@ -216,10 +241,8 @@
     object-fit: cover;
   }
 
-  .project-media {
-    display: flex;
-    flex-direction: column;
-    gap: 2rem;
+  /* Video sections */
+  .video-section {
     margin: 2.5rem 0;
   }
 
@@ -236,13 +259,32 @@
     font-weight: 400;
   }
 
+  .landscape-videos {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .reel-videos {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
   .embed-frame {
     position: relative;
-    width: 100%;
-    padding-bottom: 56.25%;
     border-radius: 14px;
     overflow: hidden;
     background-color: #000;
+  }
+
+  .embed-frame.landscape {
+    width: 100%;
+    padding-bottom: 56.25%;
+  }
+
+  .embed-frame.reel {
+    padding-bottom: 177.78%; /* 9:16 */
   }
 
   .embed-frame iframe {
@@ -403,6 +445,10 @@
   @media (max-width: 768px) {
     .project-page {
       padding: 2rem var(--page-pad);
+    }
+
+    .reel-videos {
+      grid-template-columns: repeat(2, 1fr);
     }
 
     .project-breakdown {
