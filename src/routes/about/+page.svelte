@@ -345,7 +345,11 @@
 
     .profile-image-wrapper {
       position: static;
-      aspect-ratio: 1/1;
+      aspect-ratio: auto;
+    }
+
+    .profile-image {
+      height: auto;
     }
 
     .expertise-grid {

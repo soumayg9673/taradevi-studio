@@ -457,7 +457,12 @@
     }
 
     .reel-videos {
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: 1fr;
+    }
+
+    .embed-frame.reel {
+      padding-bottom: 0;
+      height: 60vh;
     }
 
     .project-breakdown {
