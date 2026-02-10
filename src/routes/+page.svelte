@@ -18,7 +18,7 @@
 <!-- Hero Section -->
 <section class="hero">
   <div class="hero-inner">
-    <p class="hero-eyebrow">Creative Strategy · Visual Strategy & Production Lead · Creative Producer · Brand Storytelling Strategist</p>
+    <p class="hero-eyebrow">Creative Strategist · Visual Strategy & Production Lead · Creative Producer · Brand Storytelling</p>
     <h1 class="hero-title">{siteData.title}</h1>
     <p class="hero-dash">—</p>
     <p class="hero-summary">{siteData.summary}</p>
