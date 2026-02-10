@@ -37,22 +37,6 @@
                 <span class="tag">{tag}</span>
               {/each}
             </div>
-            {#if (project.videos && project.videos.length > 0) || project.presentationUrl}
-              <div class="project-media">
-                {#each project.videos ?? [] as video}
-                  <button class="media-badge" onclick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(video.url, '_blank', 'noopener,noreferrer'); }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-                    {video.url.includes('youtube') ? 'YouTube' : 'Video'}
-                  </button>
-                {/each}
-                {#if project.presentationUrl}
-                  <button class="media-badge" onclick={(e) => { e.preventDefault(); e.stopPropagation(); window.open(project.presentationUrl, '_blank', 'noopener,noreferrer'); }}>
-                    <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/></svg>
-                    Slides
-                  </button>
-                {/if}
-              </div>
-            {/if}
           </div>
         </a>
       {/each}
@@ -185,33 +169,6 @@
     background-color: rgba(0, 0, 0, 0.06);
     letter-spacing: 0.08em;
     text-transform: uppercase;
-  }
-
-  .project-media {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.4rem;
-  }
-
-  .media-badge {
-    display: inline-flex;
-    align-items: center;
-    gap: 0.35rem;
-    font-family: var(--font-body);
-    font-size: 0.62rem;
-    padding: 0.25rem 0.8rem;
-    border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.1);
-    letter-spacing: 0.1em;
-    text-transform: uppercase;
-    text-decoration: none;
-    color: inherit;
-    transition: background-color 0.2s ease;
-  }
-
-  .media-badge:hover {
-    background-color: rgba(0, 0, 0, 0.22);
   }
 
   @media (max-width: 768px) {
