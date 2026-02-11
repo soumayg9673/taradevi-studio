@@ -139,7 +139,7 @@
 		"company": "Personal Project",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-white)",
+		"color": "var(--color-gray-200)",
 		"image": "/images/photoshoot-what-streets-taught-me/69.webp",
 		"link": "",
 		"tags": ["Photography", "Art Direction", "Styling"],
