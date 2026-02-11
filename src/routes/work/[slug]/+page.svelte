@@ -3,7 +3,6 @@
 
   let { data }: { data: PageData } = $props();
 
-  const accentColors = ['var(--color-pink)', 'var(--color-yellow)', 'var(--color-blue)', 'var(--color-lavender)'];
 
   function getVideoEmbedUrl(url: string): string | null {
     if (!url) return null;
@@ -158,7 +157,7 @@
         <h2 class="related-label">Related Work</h2>
         <div class="related-grid">
           {#each data.related as rel, i}
-            <a href="/work/{rel.slug}" class="related-item" style="--accent: {accentColors[i % accentColors.length]}">
+            <a href="/work/{rel.slug}" class="related-item" style="--accent: {rel.color}">
               <div class="related-thumb">
                 <img src={rel.image} alt={rel.title} loading="lazy" />
               </div>

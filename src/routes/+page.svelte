@@ -3,7 +3,6 @@
   import projectsData from '$lib/data/projects.json';
 
   const featuredProjects = projectsData.filter((p) => p.isFeatured);
-  const accentColors = ['var(--color-pink)', 'var(--color-yellow)', 'var(--color-blue)', 'var(--color-lavender)'];
 </script>
 
 <svelte:head>
@@ -33,7 +32,7 @@
     <h2 class="section-heading">Selected Work</h2>
     {#each featuredProjects as project, i}
       <a href="/work/{project.slug}" class="project-card-link">
-        <article class="project-card" style="--accent: {accentColors[i % accentColors.length]}">
+        <article class="project-card" style="--accent: {project.color}">
           <div class="project-image">
             <img src={project.image} alt={project.title} loading="lazy" />
           </div>

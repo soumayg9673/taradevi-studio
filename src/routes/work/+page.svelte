@@ -1,8 +1,6 @@
 <script lang="ts">
   import siteData from '$lib/data/site.json';
   import projectsData from '$lib/data/projects.json';
-
-  const accentColors = ['var(--color-pink)', 'var(--color-yellow)', 'var(--color-blue)', 'var(--color-lavender)'];
 </script>
 
 <svelte:head>
@@ -23,7 +21,7 @@
 
     <div class="projects-list">
       {#each projectsData as project, i}
-        <a href="/work/{project.slug}" class="project-item" style="--accent: {accentColors[i % accentColors.length]}">
+        <a href="/work/{project.slug}" class="project-item" style="--accent: {project.color}">
           <div class="project-thumb">
             <img src={project.image} alt={project.title} loading="lazy" />
           </div>
