@@ -48,7 +48,11 @@
 
     <!-- Description above images for personal projects -->
     {#if data.project.isPersonal}
-      <p class="project-description">{data.project.description}</p>
+      <div class="project-description">
+        {#each data.project.description as paragraph}
+          <p>{paragraph}</p>
+        {/each}
+      </div>
     {/if}
 
     <!-- Images -->
@@ -116,7 +120,11 @@
     <!-- Description & Link -->
     <div class="project-body">
       {#if !data.project.isPersonal}
-        <p class="project-description">{data.project.description}</p>
+        <div class="project-description">
+          {#each data.project.description as paragraph}
+            <p>{paragraph}</p>
+          {/each}
+        </div>
       {/if}
 
       {#if (data.project.plan && data.project.plan.length > 0) || (data.project.strategy && data.project.strategy.length > 0)}
@@ -311,6 +319,12 @@
   }
 
   .project-description {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .project-description p {
     font-family: var(--font-body);
     font-size: 0.95rem;
     line-height: 1.9;
