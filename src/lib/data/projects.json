@@ -22,72 +22,87 @@
 			"Conceptualized visual mood boards and storyboards, defining the aesthetic direction, lighting references, and color stories for the entire winter season.",
 			"Collaborated with Art Directors and Photographers to translate brand concepts into high-impact visual assets, ensuring every shot met the campaign's creative brief.",
 			"Curated and mapped 200+ outfits, managing the technical \"flat lay\" and \"on-model\" styling to ensure consistency across the digital lookbook.",
-			"Led model scouting and talent selection, personally vetting and casting talent that embodied the brand’s winter persona.",
+			"Led model scouting and talent selection, personally vetting and casting talent that embodied the brand's winter persona.",
 			"Directed on-site location scouting, identifying and securing environments that aligned with the storyboard's atmospheric requirements.",
 			"Orchestrated the production of 100+ creative assets, overseeing the transition from raw footage to social-optimized reels with a focus on high-retention hooks.",
 			"Managed the end-to-end creative workflow, from initial outfit planning and artist briefings to final post-production and asset delivery."
 		],
 		"strategy": [
-			"Elevated the brand’s perception in Tier 2, 3, and 4 markets by benchmarking art direction against global luxury standards, effectively bridging the gap between high-end international aesthetics and local accessibility.",
+			"Elevated the brand's perception in Tier 2, 3, and 4 markets by benchmarking art direction against global luxury standards, effectively bridging the gap between high-end international aesthetics and local accessibility.",
 			"Strategized the use of foreign talent and premium styling to offer a \"window into luxury\" for regional audiences, differentiating the brand from the utilitarian imagery typically used by competitors in these territories.",
 			"Produced 100+ creative assets to fuel an aggressive social calendar, ensuring the brand dominated the \"share of voice\" on platforms like Instagram and Facebook during the peak winter shopping window.",
 			"Designed a dual-track shooting workflow that enabled the simultaneous capture of cinematic brand reels and an editorial photoshoot, maximizing asset output without doubling production time.",
 			"Curated a specific \"look and feel\" that combined high-fashion foreign model casting with relatable winter styling, creating a unique \"Global-Local\" (Glocal) identity that felt both premium and reachable for regional consumers.",
-			"Cleverly utilized high-end art direction and foreign casting to \"price up\" the brand’s perception, allowing a mid-market product to compete for the psychological mindshare of a luxury consumer.",
+			"Cleverly utilized high-end art direction and foreign casting to \"price up\" the brand's perception, allowing a mid-market product to compete for the psychological mindshare of a luxury consumer.",
 			" Architected a high-gloss visual narrative that suggested an international budget while maintaining a lean, high-output production model—forcing competitors to overspend to match our visual standard."
 		],
-		"videos": [
-			{
-				"url": "https://drive.google.com/file/d/1tN11tJOz4Q0jOOSQoQpaM8z391iii2SA/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1QTavnaU3aml99Om_nPICj_g_XU_t0UDw/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1I2K3aMcPU1N9F3tmkFGmyL8RPPr0DS5X/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1_dYUYaMgF6qg6XUH0NLO_gt_EEdyr2Uo/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/15RjnmRgfhgc38ide5zjqzy7LTx3P2gqT/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1Y3XnGLmh4JD-_VkHta660nplKNjJnEYF/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1Aq5yEef_pOJ5j077NN5wDFJ24vwY77KB/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1dDQPZqruYANE04ldC6qzXinUH35gVk6A/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1tYv_uUGZhax2WEGvWbPMtEbkH9BCKqxv/view?usp=drive_link",
-				"type": "reel"
-			}
+		"media": [
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-1.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-2.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-3.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-4.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-5.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-6.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-7.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-8.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-9.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-10.webp" },
+			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-11.webp" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1tN11tJOz4Q0jOOSQoQpaM8z391iii2SA/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1QTavnaU3aml99Om_nPICj_g_XU_t0UDw/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1I2K3aMcPU1N9F3tmkFGmyL8RPPr0DS5X/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1_dYUYaMgF6qg6XUH0NLO_gt_EEdyr2Uo/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/15RjnmRgfhgc38ide5zjqzy7LTx3P2gqT/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1Y3XnGLmh4JD-_VkHta660nplKNjJnEYF/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1Aq5yEef_pOJ5j077NN5wDFJ24vwY77KB/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1dDQPZqruYANE04ldC6qzXinUH35gVk6A/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1tYv_uUGZhax2WEGvWbPMtEbkH9BCKqxv/view?usp=drive_link" }
 		],
-		"presentationUrl": "",
-		"images": [
-			"/images/winter-campaign/winter-campaign-1.webp",
-			"/images/winter-campaign/winter-campaign-2.webp",
-			"/images/winter-campaign/winter-campaign-3.webp",
-			"/images/winter-campaign/winter-campaign-4.webp",
-			"/images/winter-campaign/winter-campaign-5.webp",
-			"/images/winter-campaign/winter-campaign-6.webp",
-			"/images/winter-campaign/winter-campaign-7.webp",
-			"/images/winter-campaign/winter-campaign-8.webp",
-			"/images/winter-campaign/winter-campaign-9.webp",
-			"/images/winter-campaign/winter-campaign-10.webp",
-			"/images/winter-campaign/winter-campaign-11.webp"
-		]
+		"presentationUrl": ""
+	},
+	{
+		"slug": "dilon-ka-tyohar-festive-campaign",
+		"title": "Dilon Ka Tyohar — Festive Campaign",
+		"note": "“Dilon Ka Tyohar” is more than a tagline; it is our brand’s heartbeat. It stems from a simple truth: while clothes are draped over the body, they are always chosen by the heart. In this campaign, we redefine the act of shopping. It is no longer a transaction; it is the \"First Celebration\"—the joyous, expectant prelude to the festivities. We position our marketing designs as the threshold where the festival begins, and our films as the mirror reflecting a family’s shared dreams.",
+		"company": "Citykart",
+		"isPersonal": true,
+		"isFeatured": true,
+		"color": "var(--color-orange-100)",
+		"image": "/images/festive-campaign/1.webp",
+		"link": "",
+		"tags": [
+			"Stakeholder Management",
+			"Art Direction",
+			"Film Production",
+			"Creative Strategy",
+			"Design & Visual Identity ",
+			"Operational Management"
+		],
+		"seo": {
+			"title": "Dilon Ka Tyohar — Festive Campaign — Tara Devi",
+			"description": "A festive campaign redefining shopping as the 'First Celebration' — the joyous prelude to festivities where clothes are chosen by the heart, featuring films, brand reels, and editorial designs for Citykart.",
+			"keywords": "Dilon Ka Tyohar, Festive Campaign, Art Direction, Film Production, Creative Strategy, Visual Identity, Stakeholder Management, Citykart, Tara Devi"
+		},
+		"description": [
+			"\"Dilon Ka Tyohar\" is more than a tagline; it is our brand’s heartbeat. It stems from a simple truth: while clothes are draped over the body, they are always chosen by the heart. In this campaign, we redefine the act of shopping. It is no longer a transaction; it is the \"First Celebration\"—the joyous, expectant prelude to the festivities. We position our marketing designs as the threshold where the festival begins, and our films as the mirror reflecting a family’s shared dreams."
+		],
+		"media": [
+			{ "type": "photo", "url": "/images/festive-campaign/1.webp" },
+			{ "type": "photo", "url": "/images/festive-campaign/2.webp" },
+			{ "type": "photo", "url": "/images/festive-campaign/3.webp" },
+			{ "type": "landscape", "url": "https://drive.google.com/file/d/1x9ptJt3sxQeEiIaHKAKm2LoedjH22itn/view?usp=drive_link" },
+			{ "type": "landscape", "url": "https://drive.google.com/file/d/1ImZD7rqQxcysnQLX-bpTODM-qaN0gRhG/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1JHL_WQNqFD0yMpW7ausFdm2VRm3ksduj/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1pj5VLUS7uU0P3j3kIj4boDwsRTvU21E5/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/19NywdG2SlqezLAZPK0fJQONmjs3GeVp8/view?usp=drive_link" },
+			{ "type": "photo", "url": "/images/festive-campaign/9.webp", "grid": true },
+			{ "type": "photo", "url": "/images/festive-campaign/9a.webp", "grid": true },
+			{ "type": "photo", "url": "/images/festive-campaign/10.webp" },
+			{ "type": "photo", "url": "/images/festive-campaign/11.webp" },
+			{ "type": "photo", "url": "/images/festive-campaign/12.webp", "grid": true },
+			{ "type": "photo", "url": "/images/festive-campaign/12a.webp", "grid": true }
+		],
+		"presentationUrl": ""
 	},
 	{
 		"slug": "fashion-bawal-poore-saal-summer-campaign",
@@ -116,26 +131,18 @@
 			"The \"Fashion Bawal Poore Saal\" campaign is built on the philosophy that \"bawal\" (disruption/impact) doesn't take a break just because the temperature rises; it simply gets hotter. For this summer edition, we are stripping away the \"fancy\" filters and leaning into a Raw, Editorial Street-Vibe that captures the relentless energy of kids and youngsters who own the streets regardless of the sun.",
 			"The narrative is simple: while the world slows down in the heat, our audience ramps up the chaos, turning sweaty, sun-scorched days into a high-fashion statement."
 		],
-		"videos": [
-			{
-				"url": "https://drive.google.com/file/d/12FqzjiVts3KAuiFZd-NibaQ92w9heGv6/view?usp=drive_link",
-				"type": "landscape"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1BXGy8W812JNqMPI9EZbXr5TzFklswf1-/view?usp=drive_link",
-				"type": "landscape"
-			}
+		"media": [
+			{ "type": "photo", "url": "/images/summer-campaign-2024/1.webp" },
+			{ "type": "photo", "url": "/images/summer-campaign-2024/2.webp" },
+			{ "type": "photo", "url": "/images/summer-campaign-2024/3.webp" },
+			{ "type": "photo", "url": "/images/summer-campaign-2024/4.webp" },
+			{ "type": "photo", "url": "/images/summer-campaign-2024/5.webp" },
+			{ "type": "photo", "url": "/images/summer-campaign-2024/6.webp" },
+			{ "type": "photo", "url": "/images/summer-campaign-2024/7.webp" },
+			{ "type": "landscape", "url": "https://drive.google.com/file/d/12FqzjiVts3KAuiFZd-NibaQ92w9heGv6/view?usp=drive_link" },
+			{ "type": "landscape", "url": "https://drive.google.com/file/d/1BXGy8W812JNqMPI9EZbXr5TzFklswf1-/view?usp=drive_link" }
 		],
-		"presentationUrl": "",
-		"images": [
-			"/images/summer-campaign-2024/1.webp",
-			"/images/summer-campaign-2024/2.webp",
-			"/images/summer-campaign-2024/3.webp",
-			"/images/summer-campaign-2024/4.webp",
-			"/images/summer-campaign-2024/5.webp",
-			"/images/summer-campaign-2024/6.webp",
-			"/images/summer-campaign-2024/7.webp"
-		]
+		"presentationUrl": ""
 	},
 	{
 		"slug": "the-summer-archieve-a-debug-production",
@@ -164,51 +171,18 @@
 			"In 2021, I took on my first major production—a high-energy summer campaign built entirely on a foundation of DIY grit and creative problem-solving. With a modest budget of 5 Lacs, I transformed a green-screen studio into a vibrant, sun-soaked world.",
 			"Working without a traditional production crew, I spearheaded the entire lifecycle from pre-production to final delivery. This project was a masterclass in creative constraints; by leaning into bold designs and imaginative background integration, we captured the \"endless summer\" vibe through pure digital artistry. It stands as a testament to what can be achieved when creativity outweighs the budget."
 		],
-		"videos": [
-			{
-				"url": "https://drive.google.com/file/d/1dWrT5yMwD7EshMUEWNMMqb0rCnynzala/view?usp=drive_link",
-				"type": "landscape"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1pThvvD4UNwr0SswqN-4L5bz6gptnenXV/view?usp=drive_link",
-				"type": "landscape"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1YtqEDCzpYN-ZNs2Q3zstz6y8Zsscfj8x/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1EZKwXiZmKd4E1ahSnzaPH8cN3ZQoccEU/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1sEZCc0aeYUxTpUF8Xcp0Z9tWMr2-lIL-/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1SajESvsOxiXQYxigb7_ODsxo4-2Hgrit/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1M2O6en-IpHNqWNnEtSsSbT_0QtPJQ-_z/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1p5YS5xPGh_rj8pAulSaSTbhMnFCHliTn/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1ZHyJGLYIFVFR5dYz3FhO2EgpEaGrJ1Ex/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1dzUp8PAhhqa1Wk1eagCbS51b0ilN-zTl/view?usp=drive_link",
-				"type": "reel"
-			},
-			{
-				"url": "https://drive.google.com/file/d/1sRvDZBFnLi5fFt6rQrJ0CBTMbmn-lR2X/view?usp=drive_link",
-				"type": "reel"
-			}
+		"media": [
+			{ "type": "landscape", "url": "https://drive.google.com/file/d/1dWrT5yMwD7EshMUEWNMMqb0rCnynzala/view?usp=drive_link" },
+			{ "type": "landscape", "url": "https://drive.google.com/file/d/1pThvvD4UNwr0SswqN-4L5bz6gptnenXV/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1YtqEDCzpYN-ZNs2Q3zstz6y8Zsscfj8x/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1EZKwXiZmKd4E1ahSnzaPH8cN3ZQoccEU/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1sEZCc0aeYUxTpUF8Xcp0Z9tWMr2-lIL-/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1SajESvsOxiXQYxigb7_ODsxo4-2Hgrit/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1M2O6en-IpHNqWNnEtSsSbT_0QtPJQ-_z/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1p5YS5xPGh_rj8pAulSaSTbhMnFCHliTn/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1ZHyJGLYIFVFR5dYz3FhO2EgpEaGrJ1Ex/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1dzUp8PAhhqa1Wk1eagCbS51b0ilN-zTl/view?usp=drive_link" },
+			{ "type": "reel", "url": "https://drive.google.com/file/d/1sRvDZBFnLi5fFt6rQrJ0CBTMbmn-lR2X/view?usp=drive_link" }
 		],
 		"presentationUrl": ""
 	},
@@ -232,14 +206,13 @@
 			"Working on many projects has been fulfilling, but this one felt truly special. I found myself photographing people on crowded streets, observing their raw emotions—hesitation, curiosity, and eventually joy.",
 			"In those fleeting moments, I didn't just capture images; I felt a genuine human connection, especially when someone smiled back or gave a warm pat on the back. This experience shifted my perspective, helping me appreciate the quiet beauty in everyday life and the stories that exist within ordinary moments."
 		],
-		"videos": [],
-		"presentationUrl": "",
-		"images": [
-			"/images/photoshoot-what-streets-taught-me/65.webp",
-			"/images/photoshoot-what-streets-taught-me/66.webp",
-			"/images/photoshoot-what-streets-taught-me/67.webp",
-			"/images/photoshoot-what-streets-taught-me/68.webp",
-			"/images/photoshoot-what-streets-taught-me/69.webp"
-		]
+		"media": [
+			{ "type": "photo", "url": "/images/photoshoot-what-streets-taught-me/65.webp" },
+			{ "type": "photo", "url": "/images/photoshoot-what-streets-taught-me/66.webp" },
+			{ "type": "photo", "url": "/images/photoshoot-what-streets-taught-me/67.webp" },
+			{ "type": "photo", "url": "/images/photoshoot-what-streets-taught-me/68.webp" },
+			{ "type": "photo", "url": "/images/photoshoot-what-streets-taught-me/69.webp" }
+		],
+		"presentationUrl": ""
 	}
 ]

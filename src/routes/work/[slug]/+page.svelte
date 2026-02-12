@@ -3,6 +3,19 @@
 
   let { data }: { data: PageData } = $props();
 
+  let lightboxSrc = $state<string | null>(null);
+
+  function openLightbox(src: string) {
+    lightboxSrc = src;
+  }
+
+  function closeLightbox() {
+    lightboxSrc = null;
+  }
+
+  function handleKeydown(e: KeyboardEvent) {
+    if (e.key === 'Escape' && lightboxSrc) closeLightbox();
+  }
 
   function getVideoEmbedUrl(url: string): string | null {
     if (!url) return null;
@@ -41,7 +54,7 @@
       <h1 class="project-title">{data.project.title}</h1>
       <div class="project-tags">
         {#each data.project.tags as tag}
-          <span class="tag">{tag}</span>
+          <span class="tag" style="background-color: {data.project.color}">{tag}</span>
         {/each}
       </div>
     </header>
@@ -55,53 +68,55 @@
       </div>
     {/if}
 
-    <!-- Images -->
-    <div class="project-images">
-      {#each data.project.images as img}
-        <img src={img} alt={data.project.title} loading="lazy" />
-      {/each}
-    </div>
+    <!-- Media -->
+    {#if data.project.media && data.project.media.length > 0}
+      {@const groups = (() => {
+        const result: Array<{ type: string; grid: boolean; items: Array<{ type: string; url: string; grid?: boolean }> }> = [];
+        for (const item of data.project.media) {
+          const last = result[result.length - 1];
+          const itemGrid = !!(item as any).grid;
+          if (last && last.type === item.type && last.grid === itemGrid) {
+            last.items.push(item);
+          } else {
+            result.push({ type: item.type, grid: itemGrid, items: [item] });
+          }
+        }
+        return result;
+      })()}
 
-    <!-- Videos -->
-    {#if data.project.videos && data.project.videos.length > 0}
-      {@const reels = data.project.videos.filter((v: {url: string, type: string}) => v.type === 'reel')}
-      {@const landscapes = data.project.videos.filter((v: {url: string, type: string}) => v.type === 'landscape')}
-
-      {#if landscapes.length > 0}
-        <div class="video-section">
-          <p class="media-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            Videos
-          </p>
-          <div class="landscape-videos">
-            {#each landscapes as video, i}
-              {#if getVideoEmbedUrl(video.url)}
-                <div class="embed-frame landscape">
-                  <iframe src={getVideoEmbedUrl(video.url) ?? ''} title="Video {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-              {/if}
-            {/each}
-          </div>
-        </div>
-      {/if}
-
-      {#if reels.length > 0}
-        <div class="video-section">
-          <p class="media-label">
-            <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M8 5v14l11-7z"/></svg>
-            Reels
-          </p>
-          <div class="reel-videos">
-            {#each reels as video, i}
-              {#if getVideoEmbedUrl(video.url)}
-                <div class="embed-frame reel">
-                  <iframe src={getVideoEmbedUrl(video.url) ?? ''} title="Reel {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-                </div>
-              {/if}
-            {/each}
-          </div>
-        </div>
-      {/if}
+      <div class="project-media">
+        {#each groups as group}
+          {#if group.type === 'photo'}
+            <div class="media-group {group.grid ? 'photo-grid' : 'photo-stack'}">
+              {#each group.items as item}
+                <button class="lightbox-trigger" onclick={() => openLightbox(item.url)}>
+                  <img src={item.url} alt={data.project.title} loading="lazy" />
+                </button>
+              {/each}
+            </div>
+          {:else if group.type === 'reel'}
+            <div class="media-group reel-grid">
+              {#each group.items as item, i}
+                {#if getVideoEmbedUrl(item.url)}
+                  <div class="embed-frame reel">
+                    <iframe src={getVideoEmbedUrl(item.url) ?? ''} title="Reel {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                  </div>
+                {/if}
+              {/each}
+            </div>
+          {:else if group.type === 'landscape'}
+            <div class="media-group landscape-stack">
+              {#each group.items as item}
+                {#if getVideoEmbedUrl(item.url)}
+                  <div class="embed-frame landscape">
+                    <iframe src={getVideoEmbedUrl(item.url) ?? ''} title="Video" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                  </div>
+                {/if}
+              {/each}
+            </div>
+          {/if}
+        {/each}
+      </div>
     {/if}
 
     <!-- Presentation -->
@@ -179,6 +194,16 @@
   </div>
 </article>
 
+<svelte:window onkeydown={handleKeydown} />
+
+{#if lightboxSrc}
+  <div class="lightbox-overlay" role="dialog" aria-modal="true">
+    <button class="lightbox-backdrop" onclick={closeLightbox} aria-label="Close lightbox"></button>
+    <button class="lightbox-close" onclick={closeLightbox} aria-label="Close">&times;</button>
+    <img src={lightboxSrc} alt={data.project.title} />
+  </div>
+{/if}
+
 <style>
   .project-page {
     padding: 3.5rem var(--page-pad);
@@ -239,25 +264,62 @@
     font-size: 0.62rem;
     padding: 0.22rem 0.75rem;
     border-radius: 999px;
-    background-color: var(--color-lavender);
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
-  .project-images {
+  .project-media {
     display: flex;
     flex-direction: column;
     gap: 1.25rem;
     margin: 2.5rem 0;
   }
 
-  .project-images img {
+  .media-group {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Photos: 1 per row (default) */
+  .photo-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* Photos: 2 per row on desktop/tablet (grid flag) */
+  .photo-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
+  }
+
+  .photo-stack img,
+  .photo-grid img {
     width: 100%;
     border-radius: 14px;
     object-fit: cover;
   }
 
-  /* Video sections */
+  .photo-grid img {
+    aspect-ratio: 1 / 1;
+  }
+
+  /* Reels: 3 per row on desktop/tablet */
+  .reel-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  /* Landscape videos: full width, stacked */
+  .landscape-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
   .video-section {
     margin: 2.5rem 0;
   }
@@ -273,18 +335,6 @@
     color: var(--color-muted);
     margin-bottom: 0.75rem;
     font-weight: 400;
-  }
-
-  .landscape-videos {
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-  }
-
-  .reel-videos {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1rem;
   }
 
   .embed-frame {
@@ -464,12 +514,76 @@
     letter-spacing: 0.01em;
   }
 
+  /* Lightbox trigger */
+  .lightbox-trigger {
+    all: unset;
+    cursor: pointer;
+    display: block;
+    width: 100%;
+  }
+
+  .lightbox-trigger img {
+    transition: opacity 0.2s ease;
+  }
+
+  .lightbox-trigger:hover img {
+    opacity: 0.85;
+  }
+
+  /* Lightbox overlay */
+  .lightbox-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .lightbox-backdrop {
+    all: unset;
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    cursor: pointer;
+  }
+
+  .lightbox-overlay img {
+    position: relative;
+    max-width: 90vw;
+    max-height: 90vh;
+    object-fit: contain;
+    border-radius: 8px;
+  }
+
+  .lightbox-close {
+    all: unset;
+    position: absolute;
+    z-index: 1;
+    top: 1.25rem;
+    right: 1.5rem;
+    font-size: 2rem;
+    color: #fff;
+    cursor: pointer;
+    line-height: 1;
+    opacity: 0.8;
+    transition: opacity 0.2s ease;
+  }
+
+  .lightbox-close:hover {
+    opacity: 1;
+  }
+
   @media (max-width: 768px) {
     .project-page {
       padding: 2rem var(--page-pad);
     }
 
-    .reel-videos {
+    .photo-grid {
+      grid-template-columns: 1fr;
+    }
+
+    .reel-grid {
       grid-template-columns: 1fr;
     }
 
