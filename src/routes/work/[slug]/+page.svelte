@@ -50,7 +50,6 @@
 
     <!-- Header -->
     <header class="project-header">
-      <span class="project-company">{data.project.company}</span>
       <h1 class="project-title">{data.project.title}</h1>
       <div class="project-tags">
         {#each data.project.tags as tag}
@@ -227,7 +226,6 @@
               <div class="related-thumb">
                 <img src={rel.image} alt={rel.title} loading="lazy" />
               </div>
-              <span class="related-company">{rel.company}</span>
               <h3 class="related-name">{rel.title}</h3>
             </a>
           {/each}
@@ -276,15 +274,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
-  }
-
-  .project-company {
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.3em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    font-weight: 400;
   }
 
   .project-title {
@@ -574,15 +563,6 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
-  }
-
-  .related-company {
-    font-family: var(--font-body);
-    font-size: 0.62rem;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    font-weight: 400;
   }
 
   .related-name {

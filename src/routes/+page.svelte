@@ -38,7 +38,6 @@
           </div>
           <div class="project-details">
             <span class="project-index">0{i + 1}</span>
-            <span class="project-company">{project.company}</span>
             <h3 class="project-title">{project.title}</h3>
             <p class="project-note">{project.note}</p>
             <div class="project-tags">
@@ -195,15 +194,6 @@
     font-size: 0.65rem;
     letter-spacing: 0.2em;
     color: var(--color-muted);
-  }
-
-  .project-company {
-    font-family: var(--font-body);
-    font-size: 0.68rem;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    font-weight: 400;
   }
 
   .project-title {
