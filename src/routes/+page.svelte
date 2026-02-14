@@ -101,7 +101,6 @@
     font-size: 1.5rem;
     font-weight: 300;
     color: var(--color-border);
-    margin: 1.25rem 0;
     letter-spacing: 0.5em;
   }
 
@@ -113,7 +112,6 @@
     line-height: 1.85;
     color: var(--color-muted);
     letter-spacing: 0.01em;
-    max-width: 680px;
   }
 
   .divider {

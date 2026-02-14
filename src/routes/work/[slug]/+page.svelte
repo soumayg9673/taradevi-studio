@@ -70,16 +70,17 @@
     <!-- Media -->
     {#if data.project.media && data.project.media.length > 0}
       {@const groups = (() => {
-        const result: Array<{ type: string; grid: boolean; topic?: string; brief?: string[]; items: Array<{ type: string; url: string; grid?: boolean; note?: string[]; topic?: string; brief?: string[] }> }> = [];
+        const result: Array<{ type: string; gridCols: number; topic?: string; topicNote?: string[]; brief?: string[]; items: Array<{ type: string; url: string; grid?: number; note?: string[]; topic?: string; brief?: string[] }> }> = [];
         for (const item of data.project.media) {
           const last = result[result.length - 1];
-          const itemGrid = !!(item as any).grid;
+          const itemGridCols = (item as any).grid ? Number((item as any).grid) : 0;
           const itemTopic = (item as any).topic;
           const itemBrief = (item as any).brief;
-          if (last && last.type === item.type && last.grid === itemGrid && !itemTopic) {
+          const itemNote = (item as any).note;
+          if (last && last.type === item.type && last.gridCols === itemGridCols && !itemTopic) {
             last.items.push(item);
           } else {
-            result.push({ type: item.type, grid: itemGrid, topic: itemTopic, brief: itemBrief, items: [item] });
+            result.push({ type: item.type, gridCols: itemGridCols, topic: itemTopic, topicNote: (itemTopic && itemGridCols > 0) ? itemNote : undefined, brief: itemBrief, items: [item] });
           }
         }
         return result;
@@ -87,10 +88,17 @@
 
       <div class="project-media">
         {#each groups as group}
-          {#if group.topic || group.brief}
+          {#if group.topic || group.brief || group.topicNote}
             <div class="media-section-header">
               {#if group.topic}
                 <h3 class="media-topic">{group.topic}</h3>
+              {/if}
+              {#if group.topicNote && group.topicNote.length > 0}
+                <div class="media-note">
+                  {#each group.topicNote as paragraph}
+                    <p>{paragraph}</p>
+                  {/each}
+                </div>
               {/if}
               {#if group.brief && group.brief.length > 0}
                 <div class="media-note">
@@ -102,13 +110,13 @@
             </div>
           {/if}
           {#if group.type === 'photo'}
-            <div class="media-group {group.grid ? 'photo-grid' : 'photo-stack'}">
+            <div class="media-group {group.gridCols > 0 ? `photo-grid photo-grid-${group.gridCols}` : 'photo-stack'}">
               {#each group.items as item}
                 <figure class="media-figure">
                   <button class="lightbox-trigger" onclick={() => openLightbox(item.url)}>
                     <img src={item.url} alt={data.project.title} loading="lazy" />
                   </button>
-                  {#if item.note && item.note.length > 0}
+                  {#if !group.gridCols && item.note && item.note.length > 0}
                     <figcaption class="media-note">
                       {#each item.note as paragraph}
                         <p>{paragraph}</p>
@@ -118,6 +126,18 @@
                 </figure>
               {/each}
             </div>
+            {#if group.gridCols > 0}
+              {@const groupNotes = group.items.filter((i, idx) => i.note && i.note.length > 0 && !(idx === 0 && group.topicNote))}
+              {#if groupNotes.length > 0}
+                <div class="media-grid-note">
+                  {#each groupNotes as item}
+                    {#each item.note ?? [] as paragraph}
+                      <p>{paragraph}</p>
+                    {/each}
+                  {/each}
+                </div>
+              {/if}
+            {/if}
           {:else if group.type === 'reel'}
             <div class="media-group reel-grid">
               {#each group.items as item, i}
@@ -126,17 +146,20 @@
                     <div class="embed-frame reel">
                       <iframe src={getVideoEmbedUrl(item.url) ?? ''} title="Reel {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
                     </div>
-                    {#if item.note && item.note.length > 0}
-                      <div class="media-note">
-                        {#each item.note as paragraph}
-                          <p>{paragraph}</p>
-                        {/each}
-                      </div>
-                    {/if}
                   </div>
                 {/if}
               {/each}
             </div>
+            {@const reelNotes = group.items.filter(i => i.note && i.note.length > 0)}
+            {#if reelNotes.length > 0}
+              <div class="media-grid-note">
+                {#each reelNotes as item}
+                  {#each item.note ?? [] as paragraph}
+                    <p>{paragraph}</p>
+                  {/each}
+                {/each}
+              </div>
+            {/if}
           {:else if group.type === 'landscape'}
             <div class="media-group landscape-stack">
               {#each group.items as item}
@@ -185,7 +208,7 @@
       {/if}
 
       {#if (data.project.plan && data.project.plan.length > 0) || (data.project.strategy && data.project.strategy.length > 0)}
-        <div class="project-breakdown">
+        <div class="project-breakdown" style="background-color: {data.project.color}">
           {#if data.project.plan && data.project.plan.length > 0}
             <div class="breakdown-section">
               <h3 class="breakdown-title">Plan</h3>
@@ -206,6 +229,17 @@
               </ul>
             </div>
           {/if}
+        </div>
+      {/if}
+
+      {#if data.project.keyLearnings && data.project.keyLearnings.length > 0}
+        <div class="project-learnings" style="background-color: {data.project.color}">
+          <h3 class="breakdown-title">Key Learnings</h3>
+          <ul class="learnings-list">
+            {#each data.project.keyLearnings as item}
+              <li>{item}</li>
+            {/each}
+          </ul>
         </div>
       {/if}
 
@@ -314,8 +348,8 @@
 
   .media-topic {
     font-family: var(--font-display);
-    font-size: 1.25rem;
-    font-weight: 300;
+    font-size: 1.7rem;
+    font-weight: 600;
     line-height: 1.4;
     letter-spacing: -0.01em;
     color: var(--color-text);
@@ -335,12 +369,17 @@
     gap: 1.25rem;
   }
 
-  /* Photos: 2 per row on desktop/tablet (grid flag) */
+  /* Photos: dynamic grid (2–6 columns) */
   .photo-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
   }
+
+  .photo-grid-2 { grid-template-columns: repeat(2, 1fr); }
+  .photo-grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .photo-grid-4 { grid-template-columns: repeat(4, 1fr); }
+  .photo-grid-5 { grid-template-columns: repeat(5, 1fr); }
+  .photo-grid-6 { grid-template-columns: repeat(6, 1fr); }
 
   .media-figure {
     margin: 0;
@@ -363,6 +402,23 @@
     margin-bottom: 0;
   }
 
+  .media-grid-note {
+    margin-top: 0.6rem;
+  }
+
+  .media-grid-note p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-text);
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+  }
+
+  .media-grid-note p:last-child {
+    margin-bottom: 0;
+  }
+
   .photo-stack img,
   .photo-grid img {
     width: 100%;
@@ -372,6 +428,8 @@
 
   .photo-grid img {
     aspect-ratio: 1 / 1;
+    object-fit: contain;
+    background-color: var(--color-bg);
   }
 
   /* Reels: 3 per row on desktop/tablet */
@@ -455,7 +513,6 @@
     gap: 2rem;
     padding: 2rem;
     border-radius: 14px;
-    background-color: var(--color-lavender);
   }
 
   .breakdown-title {
@@ -485,6 +542,34 @@
   }
 
   .breakdown-list li::before {
+    content: '—';
+    position: absolute;
+    left: 0;
+    color: var(--color-muted);
+  }
+
+  .project-learnings {
+    padding: 2rem;
+    border-radius: 14px;
+  }
+
+  .learnings-list {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.6rem;
+  }
+
+  .learnings-list li {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    line-height: 1.7;
+    padding-left: 1.1rem;
+    position: relative;
+    letter-spacing: 0.01em;
+  }
+
+  .learnings-list li::before {
     content: '—';
     position: absolute;
     left: 0;
@@ -638,7 +723,11 @@
       padding: 2rem var(--page-pad);
     }
 
-    .photo-grid {
+    .photo-grid-2,
+    .photo-grid-3,
+    .photo-grid-4,
+    .photo-grid-5,
+    .photo-grid-6 {
       grid-template-columns: 1fr;
     }
 
