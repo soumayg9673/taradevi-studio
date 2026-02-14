@@ -183,11 +183,7 @@
 			{ "type": "photo", "url": "/images/summer-campaign-2024/7.webp" },
 			{
 				"type": "landscape",
-				"url": "https://drive.google.com/file/d/12FqzjiVts3KAuiFZd-NibaQ92w9heGv6/view?usp=drive_link"
-			},
-			{
-				"type": "landscape",
-				"url": "https://drive.google.com/file/d/1BXGy8W812JNqMPI9EZbXr5TzFklswf1-/view?usp=drive_link"
+				"url": "https://drive.google.com/file/d/1I2e_2hWJSyRsf4Eq0SqkeZM4o6zvgvJl/view?usp=drive_link"
 			}
 		],
 		"presentationUrl": ""
@@ -200,7 +196,7 @@
 		"isPersonal": true,
 		"isFeatured": true,
 		"color": "var(--color-cyan-50)",
-		"image": "/images/visual-communication-design/1.webp",
+		"image": "/images/visual-communication-design/cover.webp",
 		"link": "",
 		"tags": [
 			"Art Direction",
