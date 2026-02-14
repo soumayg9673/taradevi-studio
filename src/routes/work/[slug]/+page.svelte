@@ -71,14 +71,16 @@
     <!-- Media -->
     {#if data.project.media && data.project.media.length > 0}
       {@const groups = (() => {
-        const result: Array<{ type: string; grid: boolean; items: Array<{ type: string; url: string; grid?: boolean }> }> = [];
+        const result: Array<{ type: string; grid: boolean; topic?: string; brief?: string[]; items: Array<{ type: string; url: string; grid?: boolean; note?: string[]; topic?: string; brief?: string[] }> }> = [];
         for (const item of data.project.media) {
           const last = result[result.length - 1];
           const itemGrid = !!(item as any).grid;
-          if (last && last.type === item.type && last.grid === itemGrid) {
+          const itemTopic = (item as any).topic;
+          const itemBrief = (item as any).brief;
+          if (last && last.type === item.type && last.grid === itemGrid && !itemTopic) {
             last.items.push(item);
           } else {
-            result.push({ type: item.type, grid: itemGrid, items: [item] });
+            result.push({ type: item.type, grid: itemGrid, topic: itemTopic, brief: itemBrief, items: [item] });
           }
         }
         return result;
@@ -86,20 +88,52 @@
 
       <div class="project-media">
         {#each groups as group}
+          {#if group.topic || group.brief}
+            <div class="media-section-header">
+              {#if group.topic}
+                <h3 class="media-topic">{group.topic}</h3>
+              {/if}
+              {#if group.brief && group.brief.length > 0}
+                <div class="media-note">
+                  {#each group.brief as paragraph}
+                    <p>{paragraph}</p>
+                  {/each}
+                </div>
+              {/if}
+            </div>
+          {/if}
           {#if group.type === 'photo'}
             <div class="media-group {group.grid ? 'photo-grid' : 'photo-stack'}">
               {#each group.items as item}
-                <button class="lightbox-trigger" onclick={() => openLightbox(item.url)}>
-                  <img src={item.url} alt={data.project.title} loading="lazy" />
-                </button>
+                <figure class="media-figure">
+                  <button class="lightbox-trigger" onclick={() => openLightbox(item.url)}>
+                    <img src={item.url} alt={data.project.title} loading="lazy" />
+                  </button>
+                  {#if item.note && item.note.length > 0}
+                    <figcaption class="media-note">
+                      {#each item.note as paragraph}
+                        <p>{paragraph}</p>
+                      {/each}
+                    </figcaption>
+                  {/if}
+                </figure>
               {/each}
             </div>
           {:else if group.type === 'reel'}
             <div class="media-group reel-grid">
               {#each group.items as item, i}
                 {#if getVideoEmbedUrl(item.url)}
-                  <div class="embed-frame reel">
-                    <iframe src={getVideoEmbedUrl(item.url) ?? ''} title="Reel {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                  <div class="media-figure">
+                    <div class="embed-frame reel">
+                      <iframe src={getVideoEmbedUrl(item.url) ?? ''} title="Reel {i + 1}" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
+                    {#if item.note && item.note.length > 0}
+                      <div class="media-note">
+                        {#each item.note as paragraph}
+                          <p>{paragraph}</p>
+                        {/each}
+                      </div>
+                    {/if}
                   </div>
                 {/if}
               {/each}
@@ -108,8 +142,17 @@
             <div class="media-group landscape-stack">
               {#each group.items as item}
                 {#if getVideoEmbedUrl(item.url)}
-                  <div class="embed-frame landscape">
-                    <iframe src={getVideoEmbedUrl(item.url) ?? ''} title="Video" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                  <div class="media-figure">
+                    <div class="embed-frame landscape">
+                      <iframe src={getVideoEmbedUrl(item.url) ?? ''} title="Video" frameborder="0" allowfullscreen allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+                    </div>
+                    {#if item.note && item.note.length > 0}
+                      <div class="media-note">
+                        {#each item.note as paragraph}
+                          <p>{paragraph}</p>
+                        {/each}
+                      </div>
+                    {/if}
                   </div>
                 {/if}
               {/each}
@@ -275,6 +318,21 @@
     margin: 2.5rem 0;
   }
 
+  .media-section-header {
+    margin-top: 2.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .media-topic {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 300;
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+    color: var(--color-text);
+    margin-bottom: 0.4rem;
+  }
+
   .media-group {
     display: flex;
     flex-direction: column;
@@ -293,6 +351,27 @@
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: 1.25rem;
+  }
+
+  .media-figure {
+    margin: 0;
+  }
+
+  .media-note {
+    margin-top: 0.6rem;
+  }
+
+  .media-note p {
+    font-family: var(--font-body);
+    font-size: 0.85rem;
+    color: var(--color-text);
+    line-height: 1.75;
+    letter-spacing: 0.01em;
+    margin-bottom: 0.5rem;
+  }
+
+  .media-note p:last-child {
+    margin-bottom: 0;
   }
 
   .photo-stack img,

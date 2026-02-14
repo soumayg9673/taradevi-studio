@@ -48,15 +48,42 @@
 			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-9.webp" },
 			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-10.webp" },
 			{ "type": "photo", "url": "/images/winter-campaign/winter-campaign-11.webp" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1tN11tJOz4Q0jOOSQoQpaM8z391iii2SA/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1QTavnaU3aml99Om_nPICj_g_XU_t0UDw/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1I2K3aMcPU1N9F3tmkFGmyL8RPPr0DS5X/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1_dYUYaMgF6qg6XUH0NLO_gt_EEdyr2Uo/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/15RjnmRgfhgc38ide5zjqzy7LTx3P2gqT/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1Y3XnGLmh4JD-_VkHta660nplKNjJnEYF/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1Aq5yEef_pOJ5j077NN5wDFJ24vwY77KB/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1dDQPZqruYANE04ldC6qzXinUH35gVk6A/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1tYv_uUGZhax2WEGvWbPMtEbkH9BCKqxv/view?usp=drive_link" }
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1tN11tJOz4Q0jOOSQoQpaM8z391iii2SA/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1QTavnaU3aml99Om_nPICj_g_XU_t0UDw/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1I2K3aMcPU1N9F3tmkFGmyL8RPPr0DS5X/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1_dYUYaMgF6qg6XUH0NLO_gt_EEdyr2Uo/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/15RjnmRgfhgc38ide5zjqzy7LTx3P2gqT/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1Y3XnGLmh4JD-_VkHta660nplKNjJnEYF/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1Aq5yEef_pOJ5j077NN5wDFJ24vwY77KB/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1dDQPZqruYANE04ldC6qzXinUH35gVk6A/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1tYv_uUGZhax2WEGvWbPMtEbkH9BCKqxv/view?usp=drive_link"
+			}
 		],
 		"presentationUrl": ""
 	},
@@ -90,11 +117,26 @@
 			{ "type": "photo", "url": "/images/festive-campaign/1.webp" },
 			{ "type": "photo", "url": "/images/festive-campaign/2.webp" },
 			{ "type": "photo", "url": "/images/festive-campaign/3.webp" },
-			{ "type": "landscape", "url": "https://drive.google.com/file/d/1x9ptJt3sxQeEiIaHKAKm2LoedjH22itn/view?usp=drive_link" },
-			{ "type": "landscape", "url": "https://drive.google.com/file/d/1ImZD7rqQxcysnQLX-bpTODM-qaN0gRhG/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1JHL_WQNqFD0yMpW7ausFdm2VRm3ksduj/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1pj5VLUS7uU0P3j3kIj4boDwsRTvU21E5/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/19NywdG2SlqezLAZPK0fJQONmjs3GeVp8/view?usp=drive_link" },
+			{
+				"type": "landscape",
+				"url": "https://drive.google.com/file/d/1x9ptJt3sxQeEiIaHKAKm2LoedjH22itn/view?usp=drive_link"
+			},
+			{
+				"type": "landscape",
+				"url": "https://drive.google.com/file/d/1ImZD7rqQxcysnQLX-bpTODM-qaN0gRhG/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1JHL_WQNqFD0yMpW7ausFdm2VRm3ksduj/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1pj5VLUS7uU0P3j3kIj4boDwsRTvU21E5/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/19NywdG2SlqezLAZPK0fJQONmjs3GeVp8/view?usp=drive_link"
+			},
 			{ "type": "photo", "url": "/images/festive-campaign/9.webp", "grid": true },
 			{ "type": "photo", "url": "/images/festive-campaign/9a.webp", "grid": true },
 			{ "type": "photo", "url": "/images/festive-campaign/10.webp" },
@@ -139,8 +181,109 @@
 			{ "type": "photo", "url": "/images/summer-campaign-2024/5.webp" },
 			{ "type": "photo", "url": "/images/summer-campaign-2024/6.webp" },
 			{ "type": "photo", "url": "/images/summer-campaign-2024/7.webp" },
-			{ "type": "landscape", "url": "https://drive.google.com/file/d/12FqzjiVts3KAuiFZd-NibaQ92w9heGv6/view?usp=drive_link" },
-			{ "type": "landscape", "url": "https://drive.google.com/file/d/1BXGy8W812JNqMPI9EZbXr5TzFklswf1-/view?usp=drive_link" }
+			{
+				"type": "landscape",
+				"url": "https://drive.google.com/file/d/12FqzjiVts3KAuiFZd-NibaQ92w9heGv6/view?usp=drive_link"
+			},
+			{
+				"type": "landscape",
+				"url": "https://drive.google.com/file/d/1BXGy8W812JNqMPI9EZbXr5TzFklswf1-/view?usp=drive_link"
+			}
+		],
+		"presentationUrl": ""
+	},
+	{
+		"slug": "visual-communication-design",
+		"title": "Visual Communication Design",
+		"note": "From immersive storefront window displays and dynamic auto-hood branding to 3D-effect hoardings, these works transform traditional advertising into an experiential journey.",
+		"company": "Citykart",
+		"isPersonal": true,
+		"isFeatured": true,
+		"color": "var(--color-cyan-50)",
+		"image": "/images/visual-communication-design/1.webp",
+		"link": "",
+		"tags": [
+			"Art Direction",
+			"Experiential Marketing",
+			"Visual Merchandising",
+			"Brand Activation Strategy",
+			"OOH (Out-of-Home) Innovation",
+			"Retail Design Strategy",
+			"Creative Visual Storytelling",
+			"Campaign Conceptualization"
+		],
+		"seo": {
+			"title": "The Summer Archive: A Debut Production — Tara Devi",
+			"description": "A high-energy summer campaign built on DIY grit and creative problem-solving, transforming a green-screen studio into a vibrant, sun-soaked world on a modest budget for Citykart.",
+			"keywords": "Summer Archive, Debut Production, Creative Direction, Green Screen, DIY Production, Compositing, Production Design, Citykart, Tara Devi"
+		},
+		"description": [
+			"This curated showcase features high-impact marketing activations and innovative creative strategies designed to dominate the consumer's daily path. From immersive storefront window displays and dynamic auto-hood branding to 3D-effect hoardings, these works transform traditional advertising into an experiential journey. By reimagining every touchpoint—including culturally-rich newspaper campaigns and architectural-scale public installations—passive viewers are turned into active brand ambassadors. This collection represents the intersection of bold art direction and measurable retail growth, successfully driving massive footfall and digital engagement across diverse urban markets."
+		],
+		"media": [
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/1.webp",
+				"topic": "The \"Local Pride\" - We saw the internet go crazy over the bold Zomato-Blinkit billboards and thought: “Why should digital have all the fun?” We hijacked that viral energy and brought it straight to the heart of the streets.",
+				"brief": ["We've officially ditched traditional, \"model-heavy\" posters for a complete offline branding revolution. By replacing boring visuals with Bold, Quirky, and Meme-Inspired designs, we've turned our store windows and Autohood Innovations into moving conversation starters. No photos, just pure personality and high-voltage fashion"]
+			},
+			{ "type": "photo", "url": "/images/visual-communication-design/2.webp" },
+			{ "type": "photo", "url": "/images/visual-communication-design/3.webp" },
+			{ "type": "photo", "url": "/images/visual-communication-design/4.webp" },
+			{ "type": "photo", "url": "/images/visual-communication-design/5.webp" },
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/6.webp",
+				"topic": "Window Display: The Concept Overview",
+				"note": [
+					"The \"Classroom Canvas\" display focuses on the nostalgic and playful side of education. By using a large-scale chalkboard as the primary \"Offer Board,\" the design immediately communicates a \"Back-to-School\" message. The composition uses oversized 2D elements like the pencil and backpack to create a sense of wonder, making the school season feel like an adventure rather than a chore. The neutral grey background allows the bright yellow and red accents to pop, ensuring that the 40% OFF messaging is the first thing a customer notices from a distance."
+				]
+			},
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/7.webp",
+				"note": [
+					"Dilon Ka Tyohar\" - The Heart of the Festival \nThis window is a cultural centerpiece designed specifically for the festive season (Durga Puja). It shifts the brand tone from functional to emotional by using traditional motifs like the Kash Phool (wild grass), the Shankha (conch shell), and the Maa Durga mask. The deep crimson backdrop creates a premium, celebratory atmosphere that honors local traditions. By positioning the mannequins under a decorative white archway, the display mimics a Pandal (traditional marquee), successfully inviting customers to visualize themselves in new festive attire for the \"Festival of the Heart\"."
+				]
+			},
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/8.webp",
+				"note": [
+					"\"Masti Ki Pathshala\" – Fun at School \nThe third display is a dynamic and geometric take on the academic theme, utilizing the concept of \"The School of Fun.\" Unlike the first window, this one uses vibrant, oversized stationery like the 3D-effect yellow set-square and red ruler to frame the merchandise. The central \"Open Book\" serves as both a thematic element and a promotional sign, creating a literal story for the consumer to read. The use of a \"Crayon\" style background adds a layer of creativity and energy, specifically targeting younger children and encouraging a joyful approach to the upcoming school year."
+				]
+			},
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/9.webp",
+				"topic": "Brand Awareness Activation",
+				"note": [
+					"Our goal was to evolve the traditional \"logo wall\" into an architectural brand experience. By utilizing a recessed archway and integrated LED halo lighting, we created a high-contrast, professional \"stage\" that invites the customer to step into the brand's world.",
+					"The play between the textured red exterior and high-gloss interior ensures the installation pops against neutral retail environments, while the strategic \"I ❤️ Citykart\" placement guarantees the brand is the hero of every social media share. It’s not just a backdrop; it’s a physical-to-digital bridge designed to turn foot traffic into brand advocacy."
+				]
+			},
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/10.webp",
+				"note": [
+					"The Citykart Lucknow campaign moved beyond traditional signage to execute a series of innovative hoardings designed to stop traffic. The project focused on high-impact visual storytelling through two distinct approaches: a custom 2D-cutout illustration that breaks the billboard’s physical boundary to create a 3D pop effect, and a hyper-realistic lifestyle grid that showcases the product range with premium clarity.",
+					"By blending localized pop-culture messaging with modern, architectural layouts, these hoardings successfully cut through the urban clutter. This execution was a bold visual statement that established Citykart as a contemporary, relatable brand in the heart of the city through a creative, boundary-pushing format."
+				]
+			},
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/11.webp",
+				"note": [
+					"To disrupt the visual landscape in smaller city markets, this initiative reimagined the traditional storefront as an immersive brand landmark. By transforming the iconic shopping bag into a massive, architectural gateway directly in front of the store, the project moved beyond static signage to create a high-impact, \"Instagrammable\" mural experience. This clever shift toward experiential urban interventions turned the store entrance into a magnetic public focal point, generating significant buzz and social sharing. Executed across multiple locations, these installations successfully delivered a unique brand experience that boosted foot traffic by 40%, establishing a contemporary and relatable presence right at the customer's point of entry"
+				]
+			},
+			{
+				"type": "photo",
+				"url": "/images/visual-communication-design/12.webp",
+				"note": [
+					"This series of high-impact newspaper advertisements reimagined the retail circular as a vibrant cultural touchpoint, blending dense product catalogs with rich seasonal storytelling. By utilizing a \"Grid-to-Glow\" design strategy for campaigns like Lagan Utsav and Bada Sasta Hai, the layouts maintain high information density while using festive iconography to create an immediate emotional connection."
+				]
+			}
 		],
 		"presentationUrl": ""
 	},
@@ -172,17 +315,50 @@
 			"Working without a traditional production crew, I spearheaded the entire lifecycle from pre-production to final delivery. This project was a masterclass in creative constraints; by leaning into bold designs and imaginative background integration, we captured the \"endless summer\" vibe through pure digital artistry. It stands as a testament to what can be achieved when creativity outweighs the budget."
 		],
 		"media": [
-			{ "type": "landscape", "url": "https://drive.google.com/file/d/1dWrT5yMwD7EshMUEWNMMqb0rCnynzala/view?usp=drive_link" },
-			{ "type": "landscape", "url": "https://drive.google.com/file/d/1pThvvD4UNwr0SswqN-4L5bz6gptnenXV/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1YtqEDCzpYN-ZNs2Q3zstz6y8Zsscfj8x/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1EZKwXiZmKd4E1ahSnzaPH8cN3ZQoccEU/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1sEZCc0aeYUxTpUF8Xcp0Z9tWMr2-lIL-/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1SajESvsOxiXQYxigb7_ODsxo4-2Hgrit/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1M2O6en-IpHNqWNnEtSsSbT_0QtPJQ-_z/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1p5YS5xPGh_rj8pAulSaSTbhMnFCHliTn/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1ZHyJGLYIFVFR5dYz3FhO2EgpEaGrJ1Ex/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1dzUp8PAhhqa1Wk1eagCbS51b0ilN-zTl/view?usp=drive_link" },
-			{ "type": "reel", "url": "https://drive.google.com/file/d/1sRvDZBFnLi5fFt6rQrJ0CBTMbmn-lR2X/view?usp=drive_link" }
+			{
+				"type": "landscape",
+				"url": "https://drive.google.com/file/d/1dWrT5yMwD7EshMUEWNMMqb0rCnynzala/view?usp=drive_link"
+			},
+			{
+				"type": "landscape",
+				"url": "https://drive.google.com/file/d/1pThvvD4UNwr0SswqN-4L5bz6gptnenXV/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1YtqEDCzpYN-ZNs2Q3zstz6y8Zsscfj8x/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1EZKwXiZmKd4E1ahSnzaPH8cN3ZQoccEU/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1sEZCc0aeYUxTpUF8Xcp0Z9tWMr2-lIL-/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1SajESvsOxiXQYxigb7_ODsxo4-2Hgrit/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1M2O6en-IpHNqWNnEtSsSbT_0QtPJQ-_z/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1p5YS5xPGh_rj8pAulSaSTbhMnFCHliTn/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1ZHyJGLYIFVFR5dYz3FhO2EgpEaGrJ1Ex/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1dzUp8PAhhqa1Wk1eagCbS51b0ilN-zTl/view?usp=drive_link"
+			},
+			{
+				"type": "reel",
+				"url": "https://drive.google.com/file/d/1sRvDZBFnLi5fFt6rQrJ0CBTMbmn-lR2X/view?usp=drive_link"
+			}
 		],
 		"presentationUrl": ""
 	},
