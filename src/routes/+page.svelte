@@ -82,7 +82,7 @@
     letter-spacing: 0.5em;
     text-transform: uppercase;
     color: var(--color-muted);
-    margin-bottom: 3.5rem;
+    margin-bottom: 1rem;
     font-weight: 400;
   }
 
