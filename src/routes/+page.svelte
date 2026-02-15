@@ -1,300 +1,301 @@
 <script lang="ts">
-  import siteData from '$lib/data/site.json';
-  import projectsData from '$lib/data/projects.json';
+	import siteData from '$lib/data/site.json';
+	import projectsData from '$lib/data/projects.json';
 
-  const featuredProjects = projectsData.filter((p) => p.isFeatured);
+	const featuredProjects = projectsData.filter((p) => p.isFeatured);
 </script>
 
 <svelte:head>
-  <title>{siteData.seo.home.title}</title>
-  <meta name="description" content={siteData.seo.home.description} />
-  <meta name="keywords" content={siteData.seo.home.keywords} />
-  <meta property="og:title" content={siteData.seo.home.title} />
-  <meta property="og:description" content={siteData.seo.home.description} />
-  <meta property="og:type" content="website" />
+	<title>{siteData.seo.home.title}</title>
+	<meta name="description" content={siteData.seo.home.description} />
+	<meta name="keywords" content={siteData.seo.home.keywords} />
+	<meta property="og:title" content={siteData.seo.home.title} />
+	<meta property="og:description" content={siteData.seo.home.description} />
+	<meta property="og:type" content="website" />
 </svelte:head>
 
 <!-- Hero Section -->
 <section class="hero">
-  <div class="hero-inner">
-    <p class="hero-eyebrow">Creative Strategy · Visual Production · Brand Storytelling</p>
-    <h1 class="hero-title">{siteData.title}</h1>
-    <p class="hero-dash">—</p>
-    <p class="hero-summary">{siteData.summary}</p>
-  </div>
+	<p class="hero-eyebrow">Creative Strategy · Visual Production · Brand Storytelling</p>
+	<div class="hero-inner">
+		<h1 class="hero-title">{siteData.title}</h1>
+		<p class="hero-dash">—</p>
+		<p class="hero-summary">{siteData.summary}</p>
+	</div>
 </section>
-
-<div class="divider"></div>
 
 <!-- Featured Projects -->
 <section class="projects">
-  <div class="projects-inner">
-    <h2 class="section-heading">Selected Work</h2>
-    {#each featuredProjects as project, i}
-      <a href="/work/{project.slug}" class="project-card-link">
-        <article class="project-card" style="--accent: {project.color}">
-          <div class="project-image">
-            <img src={project.image} alt={project.title} loading="lazy" />
-          </div>
-          <div class="project-details">
-            <span class="project-index">0{i + 1}</span>
-            <h3 class="project-title">{project.title}</h3>
-            <p class="project-note">{project.note}</p>
-            <div class="project-tags">
-              {#each project.tags as tag}
-                <span class="tag">{tag}</span>
-              {/each}
-            </div>
-            <span class="project-link">
-              View Project <span class="arrow">→</span>
-            </span>
-          </div>
-        </article>
-      </a>
-    {/each}
-    <div class="view-all">
-      <a href="/work">View all work →</a>
-    </div>
-  </div>
+	<div class="divider"></div>
+	<div class="projects-inner">
+		<h2 class="section-heading">Selected Work</h2>
+		{#each featuredProjects as project, i}
+			<a href="/work/{project.slug}" class="project-card-link">
+				<article class="project-card" style="--accent: {project.color}">
+					<div class="project-image">
+						<img src={project.image} alt={project.title} loading="lazy" />
+					</div>
+					<div class="project-details">
+						<span class="project-index">0{i + 1}</span>
+						<h3 class="project-title">{project.title}</h3>
+						<p class="project-note">{project.note}</p>
+						<div class="project-tags">
+							{#each project.tags as tag}
+								<span class="tag">{tag}</span>
+							{/each}
+						</div>
+						<span class="project-link">
+							View Project <span class="arrow">→</span>
+						</span>
+					</div>
+				</article>
+			</a>
+		{/each}
+		<div class="view-all">
+			<a href="/work">View all work →</a>
+		</div>
+	</div>
 </section>
 
 <style>
-  /* Hero */
-  .hero {
-    padding: 0 var(--page-pad);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: calc(100svh - 4rem);
-  }
+	/* Hero */
+	.hero {
+		padding: 0 var(--page-pad);
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		min-height: calc(100svh - 12rem);
+	}
 
-  .hero-inner {
-    max-width: 960px;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
+	.hero-inner {
+		max-width: 960px;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
 
-  .hero-eyebrow {
-    font-family: var(--font-body);
-    font-size: 0.6rem;
-    letter-spacing: 0.5em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    margin-bottom: 1rem;
-    font-weight: 400;
-  }
+	.hero-eyebrow {
+		font-family: var(--font-body);
+		font-size: 0.75rem;
+		letter-spacing: 0.5em;
+		text-transform: uppercase;
+		color: var(--color-muted);
+		font-weight: 400;
+		margin-top: 2rem;
+		margin-bottom: auto;
+	}
 
-  .hero-title {
-    font-family: var(--font-display);
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
-    font-weight: 300;
-    line-height: 1.1;
-    color: var(--color-text);
-    letter-spacing: -0.02em;
-    margin-bottom: 0;
-  }
+	.hero-title {
+		font-family: var(--font-display);
+		font-size: clamp(2.8rem, 7vw, 5.5rem);
+		font-weight: 300;
+		line-height: 1.1;
+		color: var(--color-text);
+		letter-spacing: -0.02em;
+		margin-bottom: 0;
+	}
 
-  .hero-dash {
-    font-family: var(--font-display);
-    font-size: 1.5rem;
-    font-weight: 300;
-    color: var(--color-border);
-    letter-spacing: 0.5em;
-  }
+	.hero-dash {
+		font-family: var(--font-display);
+		font-size: 1.5rem;
+		font-weight: 300;
+		color: var(--color-border);
+		letter-spacing: 0.5em;
+	}
 
-  .hero-summary {
-    font-family: var(--font-display);
-    font-size: clamp(1rem, 1.8vw, 1.25rem);
-    font-weight: 300;
-    font-style: italic;
-    line-height: 1.85;
-    color: var(--color-muted);
-    letter-spacing: 0.01em;
-  }
+	.hero-summary {
+		font-family: var(--font-display);
+		font-size: clamp(1.15rem, 2.2vw, 1.5rem);
+		font-weight: 300;
+		font-style: italic;
+		line-height: 1.85;
+		color: var(--color-muted);
+		letter-spacing: 0.01em;
+	}
 
-  .divider {
-    max-width: var(--page-max);
-    margin: 0 auto;
-    padding: 0 var(--page-pad);
-    border-top: 1px solid var(--color-border);
-  }
+	.divider {
+		max-width: var(--page-max);
+		margin: 0 auto 5rem;
+		padding: 0 var(--page-pad);
+		border-top: 1px solid var(--color-border);
+	}
 
-  .project-card-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-    margin-bottom: 2rem;
-  }
+	.project-card-link {
+		display: block;
+		text-decoration: none;
+		color: inherit;
+		margin-bottom: 2rem;
+	}
 
-  /* Projects */
-  .projects {
-    padding: 5rem var(--page-pad);
-  }
+	/* Projects */
+	.projects {
+		padding: 5rem var(--page-pad);
+	}
 
-  .projects-inner {
-    max-width: var(--page-max);
-    margin: 0 auto;
-  }
+	.projects-inner {
+		max-width: var(--page-max);
+		margin: 0 auto;
+	}
 
-  .section-heading {
-    font-family: var(--font-body);
-    font-size: 0.68rem;
-    font-weight: 400;
-    letter-spacing: 0.35em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    margin-bottom: 3.5rem;
-  }
+	.section-heading {
+		font-family: var(--font-body);
+		font-size: 0.68rem;
+		font-weight: 400;
+		letter-spacing: 0.35em;
+		text-transform: uppercase;
+		color: var(--color-muted);
+		margin-bottom: 3.5rem;
+	}
 
-  .project-card {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3.5rem;
-    align-items: center;
-    padding: 2.5rem;
-    border-radius: 4px;
-    background-color: var(--accent);
-    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-  }
+	.project-card {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 3.5rem;
+		align-items: center;
+		padding: 2.5rem;
+		border-radius: 4px;
+		background-color: var(--accent);
+		transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+	}
 
-  .project-card-link:hover .project-card {
-    transform: translateY(-6px);
-  }
+	.project-card-link:hover .project-card {
+		transform: translateY(-6px);
+	}
 
-  .project-image {
-    border-radius: 2px;
-    overflow: hidden;
-    aspect-ratio: 4/3;
-    background-color: rgba(0, 0, 0, 0.04);
-  }
+	.project-image {
+		border-radius: 2px;
+		overflow: hidden;
+		aspect-ratio: 4/3;
+		background-color: rgba(0, 0, 0, 0.04);
+	}
 
-  .project-image img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.5s ease;
-  }
+	.project-image img {
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		transition: transform 0.5s ease;
+	}
 
-  .project-card-link:hover .project-image img {
-    transform: scale(1.04);
-  }
+	.project-card-link:hover .project-image img {
+		transform: scale(1.04);
+	}
 
-  .project-details {
-    display: flex;
-    flex-direction: column;
-    gap: 0.65rem;
-  }
+	.project-details {
+		display: flex;
+		flex-direction: column;
+		gap: 0.65rem;
+	}
 
-  .project-index {
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: var(--color-muted);
-  }
+	.project-index {
+		font-family: var(--font-body);
+		font-size: 0.65rem;
+		letter-spacing: 0.2em;
+		color: var(--color-muted);
+	}
 
-  .project-title {
-    font-family: var(--font-display);
-    font-size: clamp(1.5rem, 2.4vw, 2.2rem);
-    font-weight: 300;
-    line-height: 1.15;
-    margin-top: 0.3rem;
-    letter-spacing: -0.01em;
-  }
+	.project-title {
+		font-family: var(--font-display);
+		font-size: clamp(1.5rem, 2.4vw, 2.2rem);
+		font-weight: 300;
+		line-height: 1.15;
+		margin-top: 0.3rem;
+		letter-spacing: -0.01em;
+	}
 
-  .project-note {
-    font-family: var(--font-body);
-    font-size: 0.85rem;
-    color: var(--color-muted);
-    line-height: 1.75;
-    letter-spacing: 0.01em;
-  }
+	.project-note {
+		font-family: var(--font-body);
+		font-size: 0.85rem;
+		color: var(--color-muted);
+		line-height: 1.75;
+		letter-spacing: 0.01em;
+	}
 
-  .project-tags {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 0.4rem;
-    margin-top: 0.25rem;
-  }
+	.project-tags {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.4rem;
+		margin-top: 0.25rem;
+	}
 
-  .tag {
-    font-family: var(--font-body);
-    font-size: 0.62rem;
-    padding: 0.22rem 0.75rem;
-    border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.06);
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
+	.tag {
+		font-family: var(--font-body);
+		font-size: 0.62rem;
+		padding: 0.22rem 0.75rem;
+		border-radius: 999px;
+		background-color: rgba(0, 0, 0, 0.06);
+		letter-spacing: 0.08em;
+		text-transform: uppercase;
+	}
 
-  .project-link {
-    margin-top: 0.75rem;
-    font-family: var(--font-body);
-    font-size: 0.75rem;
-    font-weight: 400;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    color: var(--color-text);
-    display: inline-flex;
-    align-items: center;
-    gap: 0.5rem;
-    transition: gap 0.25s ease;
-  }
+	.project-link {
+		margin-top: 0.75rem;
+		font-family: var(--font-body);
+		font-size: 0.75rem;
+		font-weight: 400;
+		letter-spacing: 0.2em;
+		text-transform: uppercase;
+		color: var(--color-text);
+		display: inline-flex;
+		align-items: center;
+		gap: 0.5rem;
+		transition: gap 0.25s ease;
+	}
 
-  .project-link:hover {
-    gap: 0.75rem;
-  }
+	.project-link:hover {
+		gap: 0.75rem;
+	}
 
-  .arrow {
-    transition: transform 0.2s ease;
-  }
+	.arrow {
+		transition: transform 0.2s ease;
+	}
 
-  .project-link:hover .arrow {
-    transform: translateX(4px);
-  }
+	.project-link:hover .arrow {
+		transform: translateX(4px);
+	}
 
-  .view-all {
-    margin-top: 1rem;
-    text-align: right;
-  }
+	.view-all {
+		margin-top: 1rem;
+		text-align: right;
+	}
 
-  .view-all a {
-    font-family: var(--font-body);
-    font-size: 0.72rem;
-    font-weight: 400;
-    letter-spacing: 0.25em;
-    text-transform: uppercase;
-    color: var(--color-muted);
-    transition: color 0.3s;
-  }
+	.view-all a {
+		font-family: var(--font-body);
+		font-size: 0.72rem;
+		font-weight: 400;
+		letter-spacing: 0.25em;
+		text-transform: uppercase;
+		color: var(--color-muted);
+		transition: color 0.3s;
+	}
 
-  .view-all a:hover {
-    color: var(--color-text);
-  }
+	.view-all a:hover {
+		color: var(--color-text);
+	}
 
-  @media (max-width: 768px) {
-    .hero {
-      min-height: calc(100svh - 3.5rem);
-      padding: 2rem var(--page-pad);
-    }
+	@media (max-width: 768px) {
+		.hero {
+			min-height: calc(100svh - 3.5rem);
+			padding: 2rem var(--page-pad);
+		}
 
-    .hero-eyebrow {
-      margin-bottom: 2rem;
-    }
+		.hero-eyebrow {
+			margin-bottom: 2rem;
+		}
 
-    .hero-dash {
-      margin: 1.5rem 0;
-    }
+		.hero-dash {
+			margin: 1.5rem 0;
+		}
 
-    .projects {
-      padding: 3rem var(--page-pad);
-    }
+		.projects {
+			padding: 3rem var(--page-pad);
+		}
 
-    .project-card {
-      grid-template-columns: 1fr;
-      gap: 1.5rem;
-      padding: 1.75rem;
-    }
-  }
+		.project-card {
+			grid-template-columns: 1fr;
+			gap: 1.5rem;
+			padding: 1.75rem;
+		}
+	}
 </style>
