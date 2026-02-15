@@ -77,7 +77,7 @@
 
 	.page-title {
 		font-family: var(--font-display);
-		font-size: clamp(4rem, 10vw, 8rem);
+		font-size: clamp(3.5rem, 8vw, 7rem);
 		font-weight: 300;
 		line-height: 0.95;
 		letter-spacing: -0.02em;

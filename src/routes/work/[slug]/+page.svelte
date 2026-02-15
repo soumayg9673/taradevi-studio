@@ -422,7 +422,7 @@
   .photo-stack img,
   .photo-grid img {
     width: 100%;
-    border-radius: 14px;
+    border-radius: 6px;
     object-fit: cover;
   }
 
@@ -465,7 +465,7 @@
 
   .embed-frame {
     position: relative;
-    border-radius: 14px;
+    border-radius: 6px;
     overflow: hidden;
     background-color: #000;
   }
@@ -512,7 +512,7 @@
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
-    border-radius: 14px;
+    border-radius: 6px;
   }
 
   .breakdown-title {
@@ -550,7 +550,7 @@
 
   .project-learnings {
     padding: 2rem;
-    border-radius: 14px;
+    border-radius: 6px;
   }
 
   .learnings-list {
@@ -628,20 +628,22 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
-    border-radius: 12px;
+    border-radius: 6px;
     background-color: var(--accent);
-    transition: transform 0.25s ease;
+    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                box-shadow 0.35s ease;
   }
 
   .related-item:hover {
     transform: translateY(-4px);
+    box-shadow: 0 12px 36px rgba(0, 0, 0, 0.06);
   }
 
   .related-thumb {
-    border-radius: 8px;
+    border-radius: 4px;
     overflow: hidden;
     aspect-ratio: 4/3;
-    background-color: rgba(0, 0, 0, 0.05);
+    background-color: rgba(0, 0, 0, 0.03);
   }
 
   .related-thumb img {
