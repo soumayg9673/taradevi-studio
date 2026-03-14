@@ -94,7 +94,7 @@
 
 	.hero-title {
 		font-family: var(--font-display);
-		font-size: clamp(2.8rem, 7vw, 5.5rem);
+		font-size: clamp(2rem, 7vw, 5.5rem);
 		font-weight: 300;
 		line-height: 1.1;
 		color: var(--color-text);

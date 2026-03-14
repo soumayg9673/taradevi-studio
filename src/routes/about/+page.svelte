@@ -148,7 +148,7 @@
 
   .about-name {
     font-family: var(--font-display);
-    font-size: clamp(2.8rem, 7vw, 5.5rem);
+    font-size: clamp(2rem, 7vw, 5.5rem);
     font-weight: 300;
     letter-spacing: 0.04em;
     margin-top: -0.5rem;
@@ -200,7 +200,7 @@
 
   .highlight-value {
     font-family: var(--font-display);
-    font-size: 2.2rem;
+    font-size: clamp(1.5rem, 3.5vw, 2.2rem);
     font-weight: 300;
     letter-spacing: -0.02em;
   }

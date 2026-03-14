@@ -45,8 +45,12 @@
 
 <article class="project-page">
   <div class="project-inner">
-    <!-- Back -->
-    <a href="/work" class="back-link">← All Work</a>
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb">
+      <a href="/work" class="breadcrumb-link">Work</a>
+      <span class="breadcrumb-sep">→</span>
+      <span class="breadcrumb-current">{data.project.title}</span>
+    </nav>
 
     <!-- Header -->
     <header class="project-header">
@@ -285,21 +289,35 @@
   }
 
   .project-inner {
-    max-width: 960px;
+    max-width: var(--page-max);
     margin: 0 auto;
   }
 
-  .back-link {
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
     font-family: var(--font-body);
     font-size: 0.65rem;
     letter-spacing: 0.3em;
     text-transform: uppercase;
-    color: var(--color-muted);
-    transition: color 0.3s;
     font-weight: 400;
   }
 
-  .back-link:hover {
+  .breadcrumb-link {
+    color: var(--color-muted);
+    transition: color 0.3s;
+  }
+
+  .breadcrumb-link:hover {
+    color: var(--color-text);
+  }
+
+  .breadcrumb-sep {
+    color: var(--color-muted);
+  }
+
+  .breadcrumb-current {
     color: var(--color-text);
   }
 
@@ -329,7 +347,7 @@
     font-family: var(--font-body);
     font-size: 0.62rem;
     padding: 0.22rem 0.75rem;
-    border-radius: 999px;
+    border-radius: 0;
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
@@ -348,7 +366,7 @@
 
   .media-topic {
     font-family: var(--font-display);
-    font-size: 1.7rem;
+    font-size: clamp(1.2rem, 3vw, 1.7rem);
     font-weight: 600;
     line-height: 1.4;
     letter-spacing: -0.01em;
@@ -422,7 +440,7 @@
   .photo-stack img,
   .photo-grid img {
     width: 100%;
-    border-radius: 6px;
+    border-radius: 0;
     object-fit: cover;
   }
 
@@ -465,7 +483,7 @@
 
   .embed-frame {
     position: relative;
-    border-radius: 6px;
+    border-radius: 0;
     overflow: hidden;
     background-color: #000;
   }
@@ -510,9 +528,19 @@
   .project-breakdown {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
-    padding: 2rem;
-    border-radius: 6px;
+    gap: 0;
+    border-radius: 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
+    overflow: hidden;
+  }
+
+  .breakdown-section {
+    padding: 2.5rem 2rem;
+  }
+
+  .breakdown-section + .breakdown-section {
+    border-left: 1px solid var(--color-border);
   }
 
   .breakdown-title {
@@ -549,8 +577,10 @@
   }
 
   .project-learnings {
-    padding: 2rem;
-    border-radius: 6px;
+    padding: 2.5rem 2rem;
+    border-radius: 0;
+    border-top: 1px solid var(--color-border);
+    border-bottom: 1px solid var(--color-border);
   }
 
   .learnings-list {
@@ -628,7 +658,7 @@
     flex-direction: column;
     gap: 0.5rem;
     padding: 1rem;
-    border-radius: 6px;
+    border-radius: 0;
     background-color: var(--accent);
     transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94),
                 box-shadow 0.35s ease;
@@ -640,7 +670,7 @@
   }
 
   .related-thumb {
-    border-radius: 4px;
+    border-radius: 0;
     overflow: hidden;
     aspect-ratio: 4/3;
     background-color: rgba(0, 0, 0, 0.03);
@@ -663,7 +693,7 @@
   /* Lightbox trigger */
   .lightbox-trigger {
     all: unset;
-    cursor: pointer;
+    cursor: zoom-in;
     display: block;
     width: 100%;
   }
@@ -744,6 +774,11 @@
 
     .project-breakdown {
       grid-template-columns: 1fr;
+    }
+
+    .breakdown-section + .breakdown-section {
+      border-left: none;
+      border-top: 1px solid var(--color-border);
     }
 
     .related-grid {
