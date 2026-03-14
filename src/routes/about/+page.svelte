@@ -1,5 +1,8 @@
 <script lang="ts">
   import siteData from '$lib/data/site.json';
+
+  const roles = siteData.aboutTitle.split(' | ');
+  const expColors = ['var(--color-pink)', 'var(--color-yellow)'];
 </script>
 
 <svelte:head>
@@ -23,7 +26,11 @@
       <div class="profile-content">
         <p class="eyebrow">About</p>
         <h1 class="about-name">{siteData.name}</h1>
-        <p class="about-subtitle">{siteData.aboutTitle}</p>
+        <div class="about-roles">
+          {#each roles as role}
+            <span class="about-role">{role}</span>
+          {/each}
+        </div>
         <p class="about-summary">{siteData.aboutMe}</p>
         <div class="highlights">
           {#each siteData.highlights as highlight, i}
@@ -66,8 +73,8 @@
   <div class="container">
     <p class="eyebrow">Experience</p>
     <div class="experience-list">
-      {#each siteData.experience as job}
-        <div class="job">
+      {#each siteData.experience as job, i}
+        <div class="job" style="background-color: {expColors[i % expColors.length]}">
           <div class="job-header">
             <strong class="job-company">{job.company}</strong>
             <span class="job-period">{job.period}</span>
@@ -148,15 +155,22 @@
     line-height: 0.95;
   }
 
-  .about-subtitle {
-    font-family: var(--font-display);
-    font-size: 1.1rem;
-    font-style: italic;
-    font-weight: 300;
+  .about-roles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
+    margin-top: -0.25rem;
+  }
+
+  .about-role {
+    font-family: var(--font-body);
+    font-size: 0.62rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
     color: var(--color-muted);
-    line-height: 1.5;
-    margin-top: -0.5rem;
-    letter-spacing: 0.01em;
+    border: 1px solid var(--color-border);
+    padding: 0.3rem 0.65rem;
+    font-weight: 400;
   }
 
   .about-summary {
@@ -220,15 +234,16 @@
   }
 
   .expertise-icon {
-    font-size: 1.5rem;
+    font-size: 1.1rem;
+    opacity: 0.5;
     line-height: 1;
+    margin-bottom: 0.1rem;
   }
 
   .expertise-title {
     font-family: var(--font-display);
     font-size: 1.25rem;
     font-weight: 400;
-    margin-top: 0.3rem;
     letter-spacing: 0.01em;
   }
 
@@ -258,7 +273,6 @@
     gap: 0.25rem;
     padding: 1.75rem 2rem;
     border-radius: 2px;
-    background-color: var(--color-yellow);
   }
 
   .job-header {
@@ -319,9 +333,10 @@
   .skill-tag {
     font-family: var(--font-body);
     font-size: 0.62rem;
-    padding: 0.22rem 0.75rem;
-    border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.06);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.18);
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }

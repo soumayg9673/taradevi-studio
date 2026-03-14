@@ -27,30 +27,35 @@
 <!-- Featured Projects -->
 <section class="projects">
 	<div class="divider"></div>
-	<div class="projects-inner">
+	<div class="projects-header">
 		<h2 class="section-heading">Selected Work</h2>
+	</div>
+	<div class="projects-list">
 		{#each featuredProjects as project, i}
 			<a href="/work/{project.slug}" class="project-card-link">
 				<article class="project-card" style="--accent: {project.color}">
-					<div class="project-image">
-						<img src={project.image} alt={project.title} loading="lazy" />
-					</div>
-					<div class="project-details">
-						<span class="project-index">0{i + 1}</span>
-						<h3 class="project-title">{project.title}</h3>
-						<p class="project-note">{project.note}</p>
-						<div class="project-tags">
-							{#each project.tags as tag}
-								<span class="tag">{tag}</span>
-							{/each}
+					<div class="project-card-inner">
+						<div class="project-image">
+							<img src={project.image} alt={project.title} loading="lazy" />
 						</div>
-						<span class="project-link">
-							View Project <span class="arrow">→</span>
-						</span>
+						<div class="project-details">
+							<h3 class="project-title">{project.title}</h3>
+							<p class="project-note">{project.note}</p>
+							<div class="project-tags">
+								{#each project.tags as tag}
+									<span class="tag">{tag}</span>
+								{/each}
+							</div>
+							<span class="project-link">
+								View Project <span class="arrow">→</span>
+							</span>
+						</div>
 					</div>
 				</article>
 			</a>
 		{/each}
+	</div>
+	<div class="view-all-wrapper">
 		<div class="view-all">
 			<a href="/work">View all work →</a>
 		</div>
@@ -126,17 +131,25 @@
 		display: block;
 		text-decoration: none;
 		color: inherit;
-		margin-bottom: 2rem;
 	}
 
 	/* Projects */
 	.projects {
-		padding: 5rem var(--page-pad);
+		padding-top: 5rem;
+		padding-bottom: 5rem;
 	}
 
-	.projects-inner {
+	.projects-header {
 		max-width: var(--page-max);
 		margin: 0 auto;
+		padding: 0 var(--page-pad);
+	}
+
+	.projects-list {
+		display: flex;
+		flex-direction: column;
+		gap: 2rem;
+		margin-bottom: 2rem;
 	}
 
 	.section-heading {
@@ -150,18 +163,32 @@
 	}
 
 	.project-card {
+		background-color: var(--accent);
+		transition: transform 0.3s ease;
+	}
+
+	.project-card-inner {
+		max-width: var(--page-max);
+		margin: 0 auto;
+		padding: 2.5rem var(--page-pad);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
 		gap: 3.5rem;
 		align-items: center;
-		padding: 2.5rem;
-		border-radius: 4px;
-		background-color: var(--accent);
-		transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	}
 
 	.project-card-link:hover .project-card {
-		transform: translateY(-6px);
+		transform: translateY(-3px);
+	}
+
+	.project-card-link:nth-child(even) .project-image {
+		order: 2;
+	}
+
+	.view-all-wrapper {
+		max-width: var(--page-max);
+		margin: 0 auto;
+		padding: 0 var(--page-pad);
 	}
 
 	.project-image {
@@ -186,13 +213,6 @@
 		display: flex;
 		flex-direction: column;
 		gap: 0.65rem;
-	}
-
-	.project-index {
-		font-family: var(--font-body);
-		font-size: 0.65rem;
-		letter-spacing: 0.2em;
-		color: var(--color-muted);
 	}
 
 	.project-title {
@@ -222,9 +242,10 @@
 	.tag {
 		font-family: var(--font-body);
 		font-size: 0.62rem;
-		padding: 0.22rem 0.75rem;
-		border-radius: 999px;
-		background-color: rgba(0, 0, 0, 0.06);
+		padding: 0.2rem 0.6rem;
+		border-radius: 0;
+		background-color: transparent;
+		border: 1px solid rgba(0, 0, 0, 0.18);
 		letter-spacing: 0.08em;
 		text-transform: uppercase;
 	}
@@ -289,13 +310,14 @@
 		}
 
 		.projects {
-			padding: 3rem var(--page-pad);
+			padding-top: 3rem;
+			padding-bottom: 3rem;
 		}
 
-		.project-card {
+		.project-card-inner {
 			grid-template-columns: 1fr;
 			gap: 1.5rem;
-			padding: 1.75rem;
+			padding: 1.75rem var(--page-pad);
 		}
 	}
 </style>

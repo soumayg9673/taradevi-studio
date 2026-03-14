@@ -20,12 +20,9 @@
 		</p>
 
 		<div class="contact-links">
-			<a
-				href="mailto:{siteData.contact.email}"
-				class="contact-item"
-				style="background-color: var(--color-pink)"
-			>
-				<span class="contact-icon">✉</span>
+			<a href="mailto:{siteData.contact.email}" class="contact-item">
+				<div class="contact-accent" style="background-color: var(--color-pink)"></div>
+				<i class="fa-regular fa-envelope contact-icon"></i>
 				<div class="contact-text">
 					<span class="contact-label">Email</span>
 					<span class="contact-value">{siteData.contact.email}</span>
@@ -38,9 +35,9 @@
 				target="_blank"
 				rel="noopener noreferrer"
 				class="contact-item"
-				style="background-color: var(--color-blue)"
 			>
-				<i class="fa-brands fa-linkedin text-lg hover:text-[#FF671F]"></i>
+				<div class="contact-accent" style="background-color: var(--color-blue)"></div>
+				<i class="fa-brands fa-linkedin-in contact-icon"></i>
 				<div class="contact-text">
 					<span class="contact-label">LinkedIn</span>
 					<span class="contact-value">tara-devi</span>
@@ -103,40 +100,50 @@
 	.contact-links {
 		display: flex;
 		flex-direction: column;
-		gap: 0.85rem;
 	}
 
 	.contact-item {
 		display: flex;
 		align-items: center;
-		gap: 1.25rem;
-		padding: 1.4rem 1.75rem;
-		border-radius: 2px;
+		gap: 1.5rem;
+		padding: 1.5rem 0;
+		border-bottom: 1px solid var(--color-border);
 		transition: transform 0.25s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 	}
 
+	.contact-item:first-child {
+		border-top: 1px solid var(--color-border);
+	}
+
 	.contact-item:hover {
-		transform: translateX(8px);
+		transform: translateX(6px);
+	}
+
+	.contact-accent {
+		width: 3px;
+		height: 2rem;
+		flex-shrink: 0;
+		border-radius: 1px;
 	}
 
 	.contact-icon {
-		font-size: 1.2rem;
-		width: 1.75rem;
+		font-size: 1rem;
+		width: 1.25rem;
 		text-align: center;
-		font-weight: 700;
-		font-family: var(--font-body);
+		color: var(--color-muted);
+		flex-shrink: 0;
 	}
 
 	.contact-text {
 		display: flex;
 		flex-direction: column;
-		gap: 0.1rem;
+		gap: 0.15rem;
 		flex: 1;
 	}
 
 	.contact-label {
 		font-family: var(--font-body);
-		font-size: 0.62rem;
+		font-size: 0.58rem;
 		letter-spacing: 0.25em;
 		text-transform: uppercase;
 		color: var(--color-muted);
@@ -153,7 +160,7 @@
 	.contact-arrow {
 		font-size: 1.1rem;
 		color: var(--color-muted);
-		transition: transform 0.25s ease;
+		transition: transform 0.25s ease, color 0.25s ease;
 	}
 
 	.contact-item:hover .contact-arrow {

@@ -6,7 +6,7 @@
 		"company": "Myntra",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-neutral-200)",
+		"color": "#eeece8",
 		"image": "/images/ai-integration-commercial-fashion-ct/cover.webp",
 		"link": "",
 		"tags": [
@@ -106,7 +106,7 @@
 		"company": "Citykart",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-blue)",
+		"color": "#dfe8df",
 		"image": "/images/winter-campaign/winter-campaign-1.webp",
 		"link": "",
 		"tags": ["Art Direction", "Creative Strategy", "Campaign Production", "Social Content Scaling"],
@@ -191,7 +191,7 @@
 		"company": "Citykart",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-indigo-50)",
+		"color": "#dce0ef",
 		"image": "/images/visual-communication-design/cover.webp",
 		"link": "",
 		"tags": [
@@ -288,7 +288,7 @@
 		"company": "Citykart",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-pink)",
+		"color": "#e3eade",
 		"image": "/images/summer-campaign-2024/1.webp",
 		"link": "",
 		"tags": [
@@ -330,7 +330,7 @@
 		"company": "Citykart",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-orange-100)",
+		"color": "#f0e4d2",
 		"image": "/images/festive-campaign/1.webp",
 		"link": "",
 		"tags": [
@@ -405,7 +405,7 @@
 		"company": "Citykart",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-lime-50)",
+		"color": "#ece8f2",
 		"image": "/images/summer-campaign-2022/cover.webp",
 		"link": "",
 		"tags": [
@@ -476,7 +476,7 @@
 		"company": "Personal Project",
 		"isPersonal": true,
 		"isFeatured": true,
-		"color": "var(--color-gray-200)",
+		"color": "#e6e4e0",
 		"image": "/images/photoshoot-what-streets-taught-me/street.webp",
 		"link": "",
 		"tags": ["Photography", "Art Direction"],

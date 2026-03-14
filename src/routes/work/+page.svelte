@@ -13,20 +13,19 @@
 </svelte:head>
 
 <section class="work-page">
-  <div class="work-inner">
-    <header class="page-header">
-      <p class="eyebrow">Portfolio</p>
-      <h1 class="page-title">Work</h1>
-    </header>
+  <div class="work-header">
+    <p class="eyebrow">Portfolio</p>
+    <h1 class="page-title">Work</h1>
+  </div>
 
-    <div class="projects-list">
-      {#each projectsData as project, i}
-        <a href="/work/{project.slug}" class="project-item" style="--accent: {project.color}">
+  <div class="projects-list">
+    {#each projectsData as project, i}
+      <a href="/work/{project.slug}" class="project-item" style="--accent: {project.color}">
+        <div class="project-item-inner">
           <div class="project-thumb">
             <img src={project.image} alt={project.title} loading="lazy" />
           </div>
           <div class="project-info">
-            <span class="project-num">0{i + 1}</span>
             <h2 class="project-title">{project.title}</h2>
             <p class="project-note">{project.note}</p>
             <div class="project-tags">
@@ -35,23 +34,22 @@
               {/each}
             </div>
           </div>
-        </a>
-      {/each}
-    </div>
+        </div>
+      </a>
+    {/each}
   </div>
 </section>
 
 <style>
   .work-page {
-    padding: 5rem var(--page-pad);
+    padding-top: 5rem;
+    padding-bottom: 5rem;
   }
 
-  .work-inner {
+  .work-header {
     max-width: var(--page-max);
     margin: 0 auto;
-  }
-
-  .page-header {
+    padding: 0 var(--page-pad);
     margin-bottom: 3.5rem;
   }
 
@@ -80,18 +78,26 @@
   }
 
   .project-item {
+    background-color: var(--accent);
+    transition: transform 0.3s ease;
+  }
+
+  .project-item-inner {
+    max-width: var(--page-max);
+    margin: 0 auto;
+    padding: 2.5rem var(--page-pad);
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 3rem;
     align-items: center;
-    padding: 2.5rem;
-    border-radius: 4px;
-    background-color: var(--accent);
-    transition: transform 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   }
 
   .project-item:hover {
-    transform: translateY(-5px);
+    transform: translateY(-3px);
+  }
+
+  .project-item:nth-child(even) .project-thumb {
+    order: 2;
   }
 
   .project-thumb {
@@ -116,13 +122,6 @@
     display: flex;
     flex-direction: column;
     gap: 0.6rem;
-  }
-
-  .project-num {
-    font-family: var(--font-body);
-    font-size: 0.65rem;
-    letter-spacing: 0.2em;
-    color: var(--color-muted);
   }
 
   .project-title {
@@ -152,22 +151,24 @@
   .tag {
     font-family: var(--font-body);
     font-size: 0.62rem;
-    padding: 0.22rem 0.75rem;
-    border-radius: 999px;
-    background-color: rgba(0, 0, 0, 0.06);
+    padding: 0.2rem 0.6rem;
+    border-radius: 0;
+    background-color: transparent;
+    border: 1px solid rgba(0, 0, 0, 0.18);
     letter-spacing: 0.08em;
     text-transform: uppercase;
   }
 
   @media (max-width: 768px) {
     .work-page {
-      padding: 3rem var(--page-pad);
+      padding-top: 3rem;
+      padding-bottom: 3rem;
     }
 
-    .project-item {
+    .project-item-inner {
       grid-template-columns: 1fr;
       gap: 1.25rem;
-      padding: 1.75rem;
+      padding: 1.75rem var(--page-pad);
     }
   }
 </style>
